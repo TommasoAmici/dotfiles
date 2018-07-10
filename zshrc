@@ -1,6 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Setting for the new UTF-8 terminal support in Lion
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 source ~/antigen.zsh
@@ -24,6 +28,7 @@ prompt_context() {
 }
 export PATH=~/.nimble/bin:$PATH
 export PATH=~/go/bin:$PATH
+# aliases
 alias c=clear
 alias p=python3
 alias lab='jupyter lab'
