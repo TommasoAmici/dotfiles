@@ -1,0 +1,33 @@
+{
+    "python.disablePromptForFeatures": [
+        "pylint"
+    ],
+    "python.autoComplete.addBrackets": true,
+    "python.linting.pep8Enabled": true,
+    "python.linting.pep8Args": [
+        "--ignore=E501"
+    ],
+    "python.pythonPath": "/usr/local/bin/python3.7",
+    "[python]": {},
+    "window.zoomLevel": 0,
+    "files.associations": {
+        "*.py": "python",
+        "*.js": "javascriptreact"
+    },
+    "editor.renderWhitespace": "all",
+    "editor.renderIndentGuides": true,
+    "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "cSpell.language": "en",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.colorTheme": "An Old Hope Classic",
+    "workbench.iconTheme": "eq-material-theme-icons-light",
+    "editor.minimap.enabled": false,
+    "powermode.enabled": true,
+    "powermode.maxExplosions": 3,
+    "powermode.presets": "exploding-rift",
+    "python.formatting.provider": "black",
+    "minify.minifyExistingOnSave": true,
+}
