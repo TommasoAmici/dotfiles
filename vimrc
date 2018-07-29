@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'dracula/vim'
 Plugin 'tpope/vim-surround'
+Plugin 'RRethy/vim-illuminate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -25,3 +26,4 @@ set expandtab
 inoremap {<cr> {<cr>}<c-o><s-o>
 inoremap [<cr> [<cr>]<c-o><s-o>
 inoremap (<cr> (<cr>)<c-o><s-o>
+set runtimepath^=~/.vim/bundle/vim-illuminate
