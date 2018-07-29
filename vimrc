@@ -26,4 +26,3 @@ set expandtab
 inoremap {<cr> {<cr>}<c-o><s-o>
 inoremap [<cr> [<cr>]<c-o><s-o>
 inoremap (<cr> (<cr>)<c-o><s-o>
-set runtimepath^=~/.vim/bundle/vim-illuminate
