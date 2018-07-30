@@ -17,7 +17,7 @@ antigen bundle pip
 antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle desyncr/auto-ls
 antigen bundle hlissner/zsh-autopair
-# gets wifi password
+# gets wifi password (macOS only)
 antigen bundle rauchg/wifi-password
 
 antigen theme agnoster
