@@ -32,3 +32,4 @@ inoremap (<cr> (<cr>)<c-o><s-o>
 
 "skeletons
 autocmd BufNewFile  *.py      0r ~/dotfiles/vim/skeletons/skeleton.py
+autocmd BufNewFile  *.sh      0r ~/dotfiles/vim/skeletons/skeleton.sh
