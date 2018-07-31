@@ -15,9 +15,9 @@
 	"Django serializer": {
 		"prefix": "newser",
 		"body": [
-			"class Serializer(serializers.ModelSerializer):",
+			"class ${1:model}Serializer(serializers.ModelSerializer):",
     		"	class Meta:",
-        	"		model =",
+        	"		model = ${1:model}",
         	"		fields = ()",
 			"		read_only_fields = ()"
 		],
