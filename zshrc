@@ -34,6 +34,9 @@ export PATH=~/go/bin:$PATH
 # aliases
 alias c=clear
 alias p=python3
+alias sv="source venv/bin/activate"
+alias ipython='p -m IPython'
+alias pip='p -m pip'
 alias lab='jupyter lab'
 alias l=ls
 alias la='ls -a'
