@@ -1,6 +1,17 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR=vim
+export DEFAULT_USER="$(whoami)"
+
+# ctrl+D won't logout the shell
+set -o ignoreeof
 
 # Setting for the new UTF-8 terminal support in Lion
 LC_CTYPE=en_US.UTF-8
@@ -20,14 +31,14 @@ antigen bundle hlissner/zsh-autopair
 # gets wifi password (macOS only)
 antigen bundle rauchg/wifi-password
 
-antigen theme agnoster
-
+# antigen theme agnoster
+antigen theme romkatv/powerlevel10k
 antigen apply
 plugins=(copyzshell)
 prompt_context() {
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-  fi
+    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+        prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+    fi
 }
 export PATH=~/.nimble/bin:$PATH
 export PATH=~/go/bin:$PATH
@@ -46,3 +57,5 @@ alias mc="make clean"
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
