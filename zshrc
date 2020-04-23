@@ -48,6 +48,8 @@ alias p=python3
 alias sv="source venv/bin/activate"
 alias ipython='p -m IPython'
 alias pip='p -m pip'
+alias venv='p -m venv venv'
+alias pir='pip install -r requirements.txt'
 alias lab='jupyter lab'
 alias l=ls
 alias la='ls -a'
@@ -55,6 +57,9 @@ alias mycc="cc -std=c99 -Wall -pedantic -Werror"
 alias m=make
 alias mc="make clean"
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+alias sv='source venv/bin/activate'
+alias de=deactivate
+alias jl='jupyter lab'
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
