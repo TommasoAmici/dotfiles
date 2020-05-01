@@ -23,10 +23,8 @@ source ~/antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle git
-antigen bundle heroku
 antigen bundle pip
 antigen bundle zdharma/fast-syntax-highlighting
-antigen bundle desyncr/auto-ls
 antigen bundle hlissner/zsh-autopair
 # gets wifi password (macOS only)
 antigen bundle rauchg/wifi-password
@@ -35,11 +33,6 @@ antigen bundle rauchg/wifi-password
 antigen theme romkatv/powerlevel10k
 antigen apply
 plugins=(copyzshell)
-prompt_context() {
-    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-        prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-    fi
-}
 export PATH=~/.nimble/bin:$PATH
 export PATH=~/go/bin:$PATH
 # aliases
