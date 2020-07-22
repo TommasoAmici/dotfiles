@@ -36,6 +36,7 @@ plugins=(copyzshell)
 export PATH=~/.nimble/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
+export PATH=/usr/local/Cellar/ruby/2.7.1_2/bin:$PATH
 # aliases
 alias c=clear
 alias p=python3
@@ -61,3 +62,5 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
