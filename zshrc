@@ -64,3 +64,5 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+export PROJECT_ENV=development
