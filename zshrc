@@ -35,6 +35,7 @@ antigen apply
 plugins=(copyzshell)
 export PATH=~/.nimble/bin:$PATH
 export PATH=~/go/bin:$PATH
+export PATH=~/.cargo/bin:$PATH
 # aliases
 alias c=clear
 alias p=python3
