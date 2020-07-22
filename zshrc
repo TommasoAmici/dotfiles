@@ -43,6 +43,7 @@ alias ipython='p -m IPython'
 alias pip='p -m pip'
 alias venv='p -m venv venv'
 alias pir='pip install -r requirements.txt'
+alias psecrets='p -c "import secrets; print(secrets.token_urlsafe(50))"'
 alias lab='jupyter lab'
 alias l=ls
 alias la='ls -a'
