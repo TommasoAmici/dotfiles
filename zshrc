@@ -43,7 +43,9 @@ alias p=python3
 alias sv="source venv/bin/activate"
 alias ipython='p -m IPython'
 alias pip='p -m pip'
-alias venv='p -m venv venv'
+alias pipupgrade='pip install --upgrade pip'
+alias sv='source venv/bin/activate'
+alias venv='p -m venv venv && sv && pipupgrade && pip install wheel'
 alias pir='pip install -r requirements.txt'
 alias psecrets='p -c "import secrets; print(secrets.token_urlsafe(50))"'
 alias lab='jupyter lab'
@@ -53,7 +55,6 @@ alias mycc="cc -std=c99 -Wall -pedantic -Werror"
 alias m=make
 alias mc="make clean"
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
-alias sv='source venv/bin/activate'
 alias de=deactivate
 alias jl='jupyter lab'
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
