@@ -58,7 +58,7 @@ alias mycc="cc -std=c99 -Wall -pedantic -Werror"
 alias m=make
 alias mc="make clean"
 alias mr="make run"
-alias brewup='brew update && brew upgrade && brew prune && brew cleanup && brew doctor'
+alias brewup='brew update && brew upgrade && brew cleanup --prune-prefix && brew doctor'
 alias de=deactivate
 alias jl='jupyter lab'
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
