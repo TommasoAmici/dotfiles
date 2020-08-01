@@ -49,16 +49,20 @@ alias venv='p -m venv venv && sv && pipupgrade && pip install wheel'
 alias pir='pip install -r requirements.txt'
 alias psecrets='p -c "import secrets; print(secrets.token_urlsafe(50))"'
 alias lab='jupyter lab'
+alias ls='ls -G'
 alias l=ls
-alias la='ls -a'
+alias ll='l -lh'
+alias la='l -a'
+alias lla='l -alh'
 alias mycc="cc -std=c99 -Wall -pedantic -Werror"
 alias m=make
 alias mc="make clean"
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+alias mr="make run"
+alias brewup='brew update && brew upgrade && brew prune && brew cleanup && brew doctor'
 alias de=deactivate
 alias jl='jupyter lab'
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
