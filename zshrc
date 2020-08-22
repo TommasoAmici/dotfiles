@@ -9,6 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR=vim
 export DEFAULT_USER="$(whoami)"
+export GPG_TTY=$(tty)
 
 # ctrl+D won't logout the shell
 set -o ignoreeof
