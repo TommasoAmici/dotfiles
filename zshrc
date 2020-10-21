@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR=vim
@@ -18,22 +21,6 @@ set -o ignoreeof
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
-source ~/antigen.zsh
-antigen use oh-my-zsh
-
-antigen bundle git
-antigen bundle pip
-antigen bundle zdharma/fast-syntax-highlighting
-antigen bundle hlissner/zsh-autopair
-# gets wifi password (macOS only)
-antigen bundle rauchg/wifi-password
-
-# antigen theme agnoster
-antigen theme romkatv/powerlevel10k
-antigen apply
-plugins=(copyzshell)
 export PATH=~/.nimble/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
@@ -64,11 +51,32 @@ alias de=deactivate
 alias jl='jupyter lab'
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 export PROJECT_ENV=development
+
+source ~/.zplug/init.zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "lib/completion", from:oh-my-zsh
+
+zplug "zsh-users/zsh-history-substring-search"
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+zplug "zsh-users/zsh-completions"
+zplug "zdharma/fast-syntax-highlighting"
+zplug "hlissner/zsh-autopair"
+# gets wifi password (macOS only)
+zplug "rauchg/wifi-password"
+
+# antigen theme agnoster
+zplug "romkatv/powerlevel10k", as:theme
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+zplug load
