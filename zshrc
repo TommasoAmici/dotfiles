@@ -12,6 +12,8 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR=vim
 export DEFAULT_USER="$(whoami)"
+# Saves 10 million lines in memory and in the bash history file.
+export HISTSIZE=10000000
 export GPG_TTY=`tty`
 
 # ctrl+D won't logout the shell
