@@ -7,5 +7,7 @@
 [pull]
 	rebase = true
 [commit]
-	gpgSign = true
+	gpgsign = true
 	commentchar = "#"
+[gpg]
+	program = /usr/local/bin/gpg
