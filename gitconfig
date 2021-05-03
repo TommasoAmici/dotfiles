@@ -9,5 +9,7 @@
 [commit]
 	gpgsign = true
 	commentchar = "#"
+[init]
+	defaultBranch = main
 [gpg]
 	program = /usr/local/bin/gpg
