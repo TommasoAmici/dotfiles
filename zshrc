@@ -143,6 +143,7 @@ alias mr="make run"
 alias de=deactivate
 alias jl='jupyter lab'
 alias bs='browser-sync start -c bs-config.js'
+alias youtube-dl=yt-dlp
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 function fixgpg() {killall gpg-agent && gpg-agent --daemon --homedir $HOME/.gnupg}
 
