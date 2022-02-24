@@ -5,6 +5,9 @@
 # shellcheck source=./sh/colors.sh
 [ -f ~/dotfiles/sh/colors.sh ] && . ~/dotfiles/sh/colors.sh
 
+# shellcheck source=./sh/env.sh
+[ -f ~/dotfiles/sh/env.sh ] && . ~/dotfiles/sh/env.sh
+
 # shellcheck source=./sh/random.sh
 [ -f ~/dotfiles/sh/random.sh ] && . ~/dotfiles/sh/random.sh
 

@@ -147,7 +147,6 @@ alias youtube-dl=yt-dlp
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 function fixgpg() {killall gpg-agent && gpg-agent --daemon --homedir $HOME/.gnupg}
 
-
 export PROJECT_ENV=development
 
 export PATH=~/.nimble/bin:$PATH
