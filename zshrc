@@ -115,6 +115,11 @@ export GPG_TTY=`tty`
 [ -f ~/.secrets.sh ] && . ~/.secrets.sh
 [ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
 [ -f /usr/local/bin/trash ] && alias rm="/usr/local/bin/trash"
+
+# Python
+export PYTHONUNBUFFERED=1
+export PYTHONDONTWRITEBYTECODE=1
+
 # aliases
 alias c=clear
 alias p=python3
