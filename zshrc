@@ -109,9 +109,9 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
 export GPG_TTY=`tty`
 
+[ -f ~/.secrets.sh ] && . ~/.secrets.sh
 [ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
 # aliases
 alias c=clear
