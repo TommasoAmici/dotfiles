@@ -112,6 +112,7 @@ fi
 
 export GPG_TTY=`tty`
 
+[ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
 # aliases
 alias c=clear
 alias p=python3
@@ -122,7 +123,6 @@ alias pipupgrade='pip install --upgrade pip'
 alias sv='source venv/bin/activate'
 alias venv='p -m venv venv && sv && pipupgrade && pip install wheel'
 alias pir='pip install -r requirements.txt'
-alias psecrets='p -c "import secrets; print(secrets.token_urlsafe(50))"'
 alias lab='jupyter lab'
 alias ls='ls -FG'
 alias l=ls
