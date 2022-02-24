@@ -30,8 +30,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # install homebrew
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    brew update
-    brew install git vim zsh python yarn node ripgrep
+  brew update
+  brew install git vim zsh python yarn node ripgrep
+  brew install --HEAD macmade/tap/trash
 fi
 # platform agnostic
 # update python packages
