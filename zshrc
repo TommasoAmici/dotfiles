@@ -163,3 +163,6 @@ export PATH="/usr/local/opt/gnupg@2.2/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+complete -o nospace -C /usr/local/bin/terraform terraform
+
