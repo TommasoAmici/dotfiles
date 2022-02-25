@@ -166,3 +166,6 @@ export PATH="/usr/local/opt/gnupg@2.2/bin:$PATH"
 
 complete -o nospace -C /usr/local/bin/terraform terraform
 
+# zoxide and fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(zoxide init zsh --cmd cd)"
