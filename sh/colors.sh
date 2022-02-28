@@ -22,3 +22,8 @@ log_error() {
 log_success() {
   printf "\033[1;32m%s\033[0m\n" "$1"
 }
+
+# Prints in blue. Usage: log_info "hello world"
+log_info() {
+  printf "\033[1;34m%s\033[0m\n" "$1"
+}
