@@ -17,3 +17,14 @@ git_optimize() {
   log_info 'Cleanup unnecessary files and optimize the local repository and prune all unreachable objects from the object database'
   git gc --prune=now --aggressive || { log_error 'Failed' && return 4; }
 }
+
+# Runs git_optimize for all directories in the current directory.
+git_optimize_all() {
+  CURRENT_DIR=$(pwd)
+  for dir in ./*/; do
+    cd "$CURRENT_DIR" || return
+    log_info "Running git maintenance in $dir"
+    cd "$dir" || return
+    git_optimize && log_success "Successful git maintenance in $dir"
+  done
+}
