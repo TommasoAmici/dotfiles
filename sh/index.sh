@@ -8,6 +8,9 @@
 # shellcheck source=./sh/env.sh
 [ -f ~/dotfiles/sh/env.sh ] && . ~/dotfiles/sh/env.sh
 
+# shellcheck source=./sh/git.sh
+[ -f ~/dotfiles/sh/git.sh ] && . ~/dotfiles/sh/git.sh
+
 # shellcheck source=./sh/random.sh
 [ -f ~/dotfiles/sh/random.sh ] && . ~/dotfiles/sh/random.sh
 
