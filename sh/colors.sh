@@ -13,12 +13,12 @@
 # Cyan         0;36     Light Cyan    1;36
 # Light Gray   0;37     White         1;37
 
-# Print in red. Usage: _red "hello world"
-_red() {
+# Prints in red. Usage: log_error "hello world"
+log_error() {
   printf "\033[1;31m%s\033[0m\n" "$1"
 }
 
-# Print in green. Usage: _green "hello world"
-_green() {
+# Prints in green. Usage: log_success "hello world"
+log_success() {
   printf "\033[1;32m%s\033[0m\n" "$1"
 }

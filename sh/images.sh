@@ -8,11 +8,11 @@ resize_image() {
   SIZE=$1
   FILE=$2
   sips --out ./resized/ --resampleHeightWidthMax "$SIZE" "$FILE"
-  _green "Resized $FILE"
+  log_success "Resized $FILE"
 
   if type npx >/dev/null 2>&1; then
     if echo "$FILE" | grep -q "opacity"; then
-      _red "Don't optimize opacity maps"
+      log_error "Don't optimize opacity maps"
     else
       npx @funboxteam/optimizt "./resized/$FILE"
     fi
