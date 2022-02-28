@@ -2,8 +2,8 @@
 
 # This index file appropriately loads all other files from the sh/ directory
 
-# shellcheck source=./sh/colors.sh
-[ -f ~/dotfiles/sh/colors.sh ] && . ~/dotfiles/sh/colors.sh
+# shellcheck source=./sh/log.sh
+[ -f ~/dotfiles/sh/log.sh ] && . ~/dotfiles/sh/log.sh
 
 # shellcheck source=./sh/env.sh
 [ -f ~/dotfiles/sh/env.sh ] && . ~/dotfiles/sh/env.sh
