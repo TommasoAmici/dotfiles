@@ -3,6 +3,8 @@
 # Performs maintenance of git repositories.
 # Adapted from https://github.com/acifani/dotfiles/blob/master/utils/git-optimize
 git_optimize() {
+  [ -d .git ] || return 0
+
   log_info 'Verifies the connectivity and validity of the objects in the database'
   git fsck --full || { log_error 'Failed' && return 1; }
 
