@@ -25,11 +25,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # macOS
   xcode-select --install
   # install homebrew
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   brew update
-  brew install git vim zsh python yarn node ripgrep zoxide fzf
-  brew install --HEAD macmade/tap/trash
+  brew bundle
 fi
 # platform agnostic
 # update python packages
