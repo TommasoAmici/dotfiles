@@ -110,7 +110,7 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export GPG_TTY=`tty`
+export GPG_TTY=$(tty)
 
 [ -f ~/.secrets.sh ] && . ~/.secrets.sh
 [ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
@@ -144,7 +144,7 @@ alias de=deactivate
 alias jl='jupyter lab'
 alias bs='browser-sync start -c bs-config.js'
 alias youtube-dl=yt-dlp
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+function gi() { curl -L -s https://www.gitignore.io/api/$@; }
 function fixgpg() {killall gpg-agent && gpg-agent --daemon --homedir $HOME/.gnupg}
 
 export PROJECT_ENV=development
