@@ -170,3 +170,5 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init zsh --cmd cd)"
 [ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
+
+export TEALDEER_CONFIG_DIR=~/dotfiles/tealdeer
