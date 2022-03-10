@@ -129,7 +129,9 @@ disabled = true
 symbol = " "
 
 [php]
-symbol = " "
+symbol = ""
+style = "147 bold bg:black"
+format = "[$symbol($version )]($style)"
 
 [python]
 symbol = " "
