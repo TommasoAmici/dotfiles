@@ -25,9 +25,9 @@ right_format = """
 [](black)\
 $character\
 $status\
-$cmd_duration\
 $jobs\
 ([$kubernetes$docker_context$package$cmake$cobol$container$dart$deno$crystal$dotnet$elixir$elm$erlang$golang$helm$java$julia$kotlin$lua$nim$nodejs$ocaml$perl$php$pulumi$purescript$python$rlang$red$ruby$rust$scala$swift$terraform$vlang$vagrant$zig$nix_shell$conda$aws$gcloud$openstack$azure](bg:black))\
+$cmd_duration
 """
 
 [battery]
