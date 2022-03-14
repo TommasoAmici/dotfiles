@@ -5,6 +5,6 @@
 # Loads environment variables from .env file in current directory
 loadenv() {
   set -o allexport
-  . .env
+  . "./.env"
   set +o allexport
 }
