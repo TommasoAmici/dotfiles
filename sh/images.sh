@@ -33,3 +33,22 @@ resize_images() {
     resize_image "$SIZE" "$FILE"
   done
 }
+
+# Converts the given PDF to PNG.
+# Optionally optimizes images with @funboxteam/optimizt if npx is installed
+# Usage: `pdf_to_png file.pdf`
+pdf_to_png() {
+  FILE=$1
+  if ! (echo "$FILE" | grep -q ".pdf"); then
+    log_error "$FILE is not a PDF"
+    return
+  fi
+
+  FILENAME=$(basename "$FILE" .pdf)
+  OUTPUT="$FILENAME.png"
+  sips --setProperty format png "$FILE" --out "$OUTPUT"
+
+  if type npx >/dev/null 2>&1; then
+    npx @funboxteam/optimizt "$OUTPUT"
+  fi
+}
