@@ -33,12 +33,17 @@ export GPG_TTY=$(tty)
 
 # aliases
 alias c=clear
-alias tree="exa --tree"
-alias ls="exa --classify --grid --icons"
+
+if type exa >/dev/null 2>&1; then
+  alias ls="exa --classify --grid --icons"
+  alias tree="exa --tree"
+fi
 alias l=ls
+alias ls='ls -FG'
 alias ll='l -lh'
 alias la='l -a'
 alias lla='l -alh'
+
 alias mycc="cc -std=c99 -Wall -pedantic -Werror"
 alias m=make
 alias mc="make clean"
