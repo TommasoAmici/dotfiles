@@ -28,3 +28,13 @@ git_optimize_all() {
     git_optimize && log_success "Successful git maintenance in $dir"
   done
 }
+
+alias ga="git add"
+alias gc="git commit"
+alias gss="git status"
+
+# Query gitignore.io to automatically generate .gitignore files
+# Example usage: gi node,yarn,git,macos,visualstudiocode > .gitignore
+gi() {
+  curl -L -s "https://www.gitignore.io/api/$1"
+}

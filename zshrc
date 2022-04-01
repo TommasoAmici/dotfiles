@@ -8,7 +8,7 @@ export ZSH=~/.oh-my-zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -45,7 +45,6 @@ alias mc="make clean"
 alias mr="make run"
 alias bs='browser-sync start -c bs-config.js'
 alias youtube-dl=yt-dlp
-function gi() { curl -L -s https://www.gitignore.io/api/$@; }
 function fixgpg() {killall gpg-agent && gpg-agent --daemon --homedir $HOME/.gnupg}
 
 export PROJECT_ENV=development
