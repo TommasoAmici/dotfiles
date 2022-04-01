@@ -70,10 +70,14 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 # zoxide and fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(zoxide init zsh --cmd cd)"
+if type zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh --cmd cd)"
+fi
 
 [ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
 
 export TEALDEER_CONFIG_DIR=~/dotfiles/tealdeer
 
-eval "$(oh-my-posh init zsh --config ~/dotfiles/powerlevel10k.omp.json)"
+if type oh-my-posh >/dev/null 2>&1; then
+  eval "$(oh-my-posh init zsh --config ~/dotfiles/powerlevel10k.omp.json)"
+fi
