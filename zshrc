@@ -116,21 +116,8 @@ export GPG_TTY=$(tty)
 [ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
 [ -f /usr/local/bin/trash ] && alias rm="/usr/local/bin/trash"
 
-# Python
-export PYTHONUNBUFFERED=1
-export PYTHONDONTWRITEBYTECODE=1
-
 # aliases
 alias c=clear
-alias p=python3
-alias sv="source venv/bin/activate"
-alias ipython='p -m IPython'
-alias pip='p -m pip'
-alias pipupgrade='pip install --upgrade pip'
-alias sv='source venv/bin/activate'
-alias venv='p -m venv venv && sv && pipupgrade && pip install wheel'
-alias pir='pip install -r requirements.txt'
-alias lab='jupyter lab'
 alias tree="exa --tree"
 alias ls="exa --classify --grid --icons"
 alias l=ls
@@ -141,8 +128,6 @@ alias mycc="cc -std=c99 -Wall -pedantic -Werror"
 alias m=make
 alias mc="make clean"
 alias mr="make run"
-alias de=deactivate
-alias jl='jupyter lab'
 alias bs='browser-sync start -c bs-config.js'
 alias youtube-dl=yt-dlp
 function gi() { curl -L -s https://www.gitignore.io/api/$@; }

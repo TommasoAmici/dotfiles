@@ -17,6 +17,9 @@
 # shellcheck source=./sh/images.sh
 [ -f ~/dotfiles/sh/images.sh ] && . ~/dotfiles/sh/images.sh
 
+# shellcheck source=./sh/python.sh
+[ -f ~/dotfiles/sh/python.sh ] && . ~/dotfiles/sh/python.sh
+
 if type ffmpeg >/dev/null 2>&1; then
   # shellcheck source=./sh/ffmpeg.sh
   [ -f ~/dotfiles/sh/ffmpeg.sh ] && . ~/dotfiles/sh/ffmpeg.sh
