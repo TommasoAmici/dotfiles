@@ -5,6 +5,13 @@
       "alignment": "left",
       "segments": [
         {
+          "background": "#d3d7cf",
+          "foreground": "#000000",
+          "style": "plain",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "type": "os"
+        },
+        {
           "background": "#3465a4",
           "foreground": "#e4e4e4",
           "properties": {
@@ -12,7 +19,7 @@
             "style": "mixed"
           },
           "style": "plain",
-          "template": " \uf07c {{ .Path }} ",
+          "template": "<parentBackground,background></> \uf07c {{ .Path }} ",
           "type": "path"
         },
         {
