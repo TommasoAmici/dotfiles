@@ -37,9 +37,10 @@ alias c=clear
 if type exa >/dev/null 2>&1; then
   alias ls="exa --classify --grid --icons"
   alias tree="exa --tree"
+else
+  alias ls='ls -FG'
 fi
 alias l=ls
-alias ls='ls -FG'
 alias ll='l -lh'
 alias la='l -a'
 alias lla='l -alh'
