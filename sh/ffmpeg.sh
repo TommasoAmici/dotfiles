@@ -23,3 +23,14 @@ optimize_mp4() {
   OUT="${2:-$1-optimized}"
   ffmpeg -i "$1" -vcodec libx264 -crf 28 "$OUT.mp4"
 }
+
+# Extracts a clip of length $2, starting from $1
+# Usage: extract_clip hh:mm:ss hh:mm:ss input [output]
+# Example: extract_clip 00:04:59 00:00:11 input.mp4 [output.mp4]
+extract_clip() {
+  START="$1"
+  LENGTH="$2"
+  INPUT="$3"
+  OUT="${4:-clip-$INPUT}"
+  ffmpeg -ss "$START" -i "$INPUT" -t "$LENGTH" -c copy "$OUT"
+}
