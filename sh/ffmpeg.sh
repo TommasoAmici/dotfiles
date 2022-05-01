@@ -14,8 +14,8 @@ to_mp4() {
 
 # Removes sound from given video
 remove_sound() {
-  OUT="${2:-$1-nosound}"
-  ffmpeg -i "$1" -c copy -an "$OUT.mp4"
+  OUT="${2:-nosound-$1}"
+  ffmpeg -i "$1" -c copy -an "$OUT"
 }
 
 # Encodes video with better settings
