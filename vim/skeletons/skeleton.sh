@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Tommaso Amici
 # *.sh is a script to ...
