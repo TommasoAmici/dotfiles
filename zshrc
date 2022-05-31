@@ -34,6 +34,10 @@ export GPG_TTY=$(tty)
 # aliases
 alias c=clear
 
+if type hx >/dev/null 2>&1; then
+  alias vim=hx
+fi
+
 if type exa >/dev/null 2>&1; then
   alias ls="exa --classify --grid --icons"
   alias tree="exa --tree"
