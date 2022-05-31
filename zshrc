@@ -29,7 +29,6 @@ export GPG_TTY=$(tty)
 
 [ -f ~/.secrets.sh ] && . ~/.secrets.sh
 [ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
-[ -f /usr/local/bin/trash ] && alias rm="/usr/local/bin/trash"
 
 # aliases
 alias c=clear
@@ -59,19 +58,15 @@ function fixgpg() {killall gpg-agent && gpg-agent --daemon --homedir $HOME/.gnup
 
 export PROJECT_ENV=development
 
-export PATH=~/.nimble/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
 export PATH=~/Library/Python/3.9/bin:$PATH
 # export PATH="/usr/local/opt/node@12/bin:$PATH"
 # export PATH="/usr/local/opt/node@14/bin:$PATH"
 export PATH="/usr/local/opt/node@16/bin:$PATH"
-export PATH="/usr/local/Cellar/rsync/3.2.3/bin/:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/gnupg@2.2/bin:$PATH"
-
-complete -o nospace -C /usr/local/bin/terraform terraform
 
 # zoxide and fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
