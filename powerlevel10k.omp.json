@@ -69,7 +69,7 @@
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue627 ",
+          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Minor }}{{ end }} \ue627 ",
           "type": "go"
         },
         {
@@ -103,7 +103,9 @@
         },
         {
           "background": "#000000",
-          "background_templates": ["{{ if gt .Code 0 }}#cc2222{{ end }}"],
+          "background_templates": [
+            "{{ if gt .Code 0 }}#cc2222{{ end }}"
+          ],
           "foreground": "#d3d7cf",
           "properties": {
             "always_enabled": true
