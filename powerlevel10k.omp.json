@@ -69,7 +69,7 @@
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Minor }}{{ end }} \ue627 ",
+          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} \ue627 ",
           "type": "go"
         },
         {
