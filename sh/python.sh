@@ -8,7 +8,7 @@ alias de=deactivate
 alias ipython='p -m IPython'
 alias pip='p -m pip'
 alias pir='pip install -r requirements.txt'
-alias pyserve="p -m http.server"
+alias pyserve="p -m http.server --bind 127.0.0.1"
 
 venv() {
   python3 -m venv venv &&
