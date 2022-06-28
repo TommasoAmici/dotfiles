@@ -27,3 +27,13 @@ log_success() {
 log_info() {
   printf "\033[0;34m%s\033[0m\n" "$1"
 }
+
+# Prints a warning in orange. Usage: log_warning "hello world"
+log_warning() {
+  printf "\033[0;33m%s\033[0m\n" "$1"
+}
+
+# Prints debug information. Usage: log_debug "hello world"
+log_debug() {
+  echo "$1"
+}
