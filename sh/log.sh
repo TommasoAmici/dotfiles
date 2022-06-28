@@ -12,28 +12,41 @@
 # Purple       0;35     Light Purple  1;35
 # Cyan         0;36     Light Cyan    1;36
 # Light Gray   0;37     White         1;37
+# LEVELS
+# debug=0
+# info=1
+# warning=2
+export LOG_LEVEL=0
 
 # Prints in red. Usage: log_error "hello world"
 log_error() {
   printf "\033[1;31m%s\033[0m\n" "$1"
 }
 
-# Prints in green. Usage: log_success "hello world"
+# Prints debug information. Usage: log_debug "hello world"
+log_debug() {
+  if [ "$LOG_LEVEL" -le 0 ]; then
+    echo "$1"
+  fi
+}
+
+# Prints in green, level info. Usage: log_success "hello world"
 log_success() {
-  printf "\033[1;32m%s\033[0m\n" "$1"
+  if [ "$LOG_LEVEL" -le 1 ]; then
+    printf "\033[1;32m%s\033[0m\n" "$1"
+  fi
 }
 
 # Prints in blue. Usage: log_info "hello world"
 log_info() {
-  printf "\033[0;34m%s\033[0m\n" "$1"
+  if [ "$LOG_LEVEL" -le 1 ]; then
+    printf "\033[0;34m%s\033[0m\n" "$1"
+  fi
 }
 
 # Prints a warning in orange. Usage: log_warning "hello world"
 log_warning() {
-  printf "\033[0;33m%s\033[0m\n" "$1"
-}
-
-# Prints debug information. Usage: log_debug "hello world"
-log_debug() {
-  echo "$1"
+  if [ "$LOG_LEVEL" -le 2 ]; then
+    printf "\033[0;33m%s\033[0m\n" "$1"
+  fi
 }
