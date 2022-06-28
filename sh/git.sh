@@ -1,5 +1,19 @@
 #!/bin/sh
 
+alias ga="git add"
+alias gc="git commit"
+alias gss="git status"
+
+# Query gitignore.io to automatically generate .gitignore files
+# Example usage: gi node,yarn,git,macos,visualstudiocode > .gitignore
+gi() {
+  curl -L -s "https://www.gitignore.io/api/$1"
+}
+
+git_reset_one_file() {
+  git checkout HEAD -- "$1"
+}
+
 # Performs maintenance of git repositories.
 # Adapted from https://github.com/acifani/dotfiles/blob/master/utils/git-optimize
 git_optimize() {
@@ -23,18 +37,21 @@ git_optimize_all() {
   CURRENT_DIR=$(pwd)
   for dir in ./*/; do
     cd "$CURRENT_DIR" || return
-    log_info "Running git maintenance in $dir"
+    log_debug "Running git maintenance in $dir"
     cd "$dir" || return
     git_optimize && log_success "Successful git maintenance in $dir"
   done
+  cd "$CURRENT_DIR" || return
 }
 
-alias ga="git add"
-alias gc="git commit"
-alias gss="git status"
-
-# Query gitignore.io to automatically generate .gitignore files
-# Example usage: gi node,yarn,git,macos,visualstudiocode > .gitignore
-gi() {
-  curl -L -s "https://www.gitignore.io/api/$1"
+# Sets core.fsmonitor to true for all directories in the current directory.
+git_fsmonitor_all() {
+  CURRENT_DIR=$(pwd)
+  for dir in ./*/; do
+    cd "$CURRENT_DIR" || return
+    log_debug "Setting core.fsmonitor to true in $dir"
+    cd "$dir" || return
+    [ -d .git ] && git config core.fsmonitor true && log_success "Set core.fsmonitor to true $dir"
+  done
+  cd "$CURRENT_DIR" || return
 }
