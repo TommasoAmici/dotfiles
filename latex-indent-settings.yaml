@@ -1,4 +1,10 @@
 modifyLineBreaks:
   textWrapOptions:
     columns: 88
-    multipleSpacesToSingle: 1
+
+noIndentBlock:
+  demo:
+    begin: '<<'
+    body: '[\s\S]*?'
+    end: '@\n'
+    lookForThis: 1
