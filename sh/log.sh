@@ -25,5 +25,5 @@ log_success() {
 
 # Prints in blue. Usage: log_info "hello world"
 log_info() {
-  printf "\033[1;34m%s\033[0m\n" "$1"
+  printf "\033[0;34m%s\033[0m\n" "$1"
 }
