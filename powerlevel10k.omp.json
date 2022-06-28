@@ -64,6 +64,20 @@
           "type": "node"
         },
         {
+          "type": "r",
+          "style": "plain",
+          "foreground": "blue",
+          "background": "lightWhite",
+          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} R "
+        },
+        {
+          "foreground": "#193549",
+          "background": "#99908a",
+          "style": "plain",
+          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} \uE7a8 ",
+          "type": "rust"
+        },
+        {
           "background": "#00acd7",
           "foreground": "#111111",
           "properties": {
