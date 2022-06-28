@@ -56,10 +56,11 @@
           "background": "#689f63",
           "foreground": "#ffffff",
           "properties": {
-            "fetch_version": true
+            "fetch_version": true,
+            "fetch_package_manager": true
           },
           "style": "plain",
-          "template": "<background,parentBackground></> {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Major }} \uf898 ",
+          "template": "<background,parentBackground></> {{ .Major }} \uf898{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }}{{ end }} ",
           "type": "node"
         },
         {
