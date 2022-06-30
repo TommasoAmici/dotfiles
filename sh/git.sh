@@ -44,14 +44,20 @@ git_optimize_all() {
   cd "$CURRENT_DIR" || return
 }
 
-# Sets core.fsmonitor to true for all directories in the current directory.
+# Sets core.fsmonitor and core.untrackedcache to true for all directories
+# in the current directory.
+# https://github.blog/2022-06-29-improve-git-monorepo-performance-with-a-file-system-monitor/
 git_fsmonitor_all() {
   CURRENT_DIR=$(pwd)
   for dir in ./*/; do
     cd "$CURRENT_DIR" || return
     log_debug "Setting core.fsmonitor to true in $dir"
     cd "$dir" || return
-    [ -d .git ] && git config core.fsmonitor true && log_success "Set core.fsmonitor to true $dir"
+
+    [ -d .git ] &&
+      git config core.fsmonitor true &&
+      git config core.untrackedcache true &&
+      log_success "Set core.fsmonitor and core.untrackedcache to true $dir"
   done
   cd "$CURRENT_DIR" || return
 }
