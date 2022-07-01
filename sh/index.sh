@@ -23,6 +23,9 @@
 # shellcheck source=./semgrep.sh
 [ -f ~/dotfiles/sh/semgrep.sh ] && . ~/dotfiles/sh/semgrep.sh
 
+# shellcheck source=./twitter.sh
+[ -f ~/dotfiles/sh/twitter.sh ] && . ~/dotfiles/sh/twitter.sh
+
 if type ffmpeg >/dev/null 2>&1; then
   # shellcheck source=./ffmpeg.sh
   [ -f ~/dotfiles/sh/ffmpeg.sh ] && . ~/dotfiles/sh/ffmpeg.sh
