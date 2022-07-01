@@ -71,6 +71,13 @@
           "type": "rust"
         },
         {
+          "type": "haskell",
+          "style": "plain",
+          "foreground": "#906cff",
+          "background": "#100e23",
+          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} \ue61f "
+        },
+        {
           "background": "#00acd7",
           "foreground": "#111111",
           "properties": {
