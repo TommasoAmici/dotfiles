@@ -2,6 +2,7 @@
 
 alias ga="git add"
 alias gc="git commit"
+alias gp="git push"
 alias gss="git status"
 
 # Query gitignore.io to automatically generate .gitignore files
