@@ -78,6 +78,8 @@ fi
 
 export TEALDEER_CONFIG_DIR=~/dotfiles/tealdeer
 
+# opam configuration
+[ -f ~/.opam/opam-init/init.zsh ] && source ~/.opam/opam-init/init.zsh
 [ -f ~/.secrets.sh ] && . ~/.secrets.sh
 [ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
 
