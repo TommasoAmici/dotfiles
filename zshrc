@@ -75,6 +75,9 @@ if type zoxide >/dev/null 2>&1; then
 fi
 
 export TEALDEER_CONFIG_DIR=~/dotfiles/tealdeer
+tldr() {
+  /usr/local/bin/tldr "$1" || /usr/local/bin/tldr -p linux "$1"
+}
 
 # opam configuration
 [ -f ~/.opam/opam-init/init.zsh ] && source ~/.opam/opam-init/init.zsh
