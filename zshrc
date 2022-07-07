@@ -19,7 +19,7 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
+if [ -n $SSH_CONNECTION ]; then
   export EDITOR='micro'
 else
   export EDITOR='vim'
