@@ -74,12 +74,13 @@ if type zoxide >/dev/null 2>&1; then
   eval "$(zoxide init zsh --cmd cd)"
 fi
 
-[ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
-
 export TEALDEER_CONFIG_DIR=~/dotfiles/tealdeer
 
 # opam configuration
 [ -f ~/.opam/opam-init/init.zsh ] && source ~/.opam/opam-init/init.zsh
+# haskell configuration
+[ -f ~/.ghcup/env ] && source ~/.ghcup/env # ghcup-env
+
 [ -f ~/.secrets.sh ] && . ~/.secrets.sh
 [ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
 
