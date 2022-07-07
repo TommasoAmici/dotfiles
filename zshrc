@@ -27,9 +27,6 @@ fi
 
 export GPG_TTY=$(tty)
 
-[ -f ~/.secrets.sh ] && . ~/.secrets.sh
-[ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
-
 # aliases
 alias c=clear
 
@@ -80,6 +77,9 @@ fi
 [ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
 
 export TEALDEER_CONFIG_DIR=~/dotfiles/tealdeer
+
+[ -f ~/.secrets.sh ] && . ~/.secrets.sh
+[ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
 
 if type oh-my-posh >/dev/null 2>&1; then
   eval "$(oh-my-posh init zsh --config ~/dotfiles/powerlevel10k.omp.json)"
