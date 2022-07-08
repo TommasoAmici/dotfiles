@@ -23,6 +23,9 @@
 # shellcheck source=./semgrep.sh
 [ -f ~/dotfiles/sh/semgrep.sh ] && . ~/dotfiles/sh/semgrep.sh
 
+# shellcheck source=./tar.sh
+[ -f ~/dotfiles/sh/tar.sh ] && . ~/dotfiles/sh/tar.sh
+
 # shellcheck source=./twitter.sh
 [ -f ~/dotfiles/sh/twitter.sh ] && . ~/dotfiles/sh/twitter.sh
 
