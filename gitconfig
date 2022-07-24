@@ -6,6 +6,8 @@
 	path = ~/.gitconfig-personal
 [pull]
 	rebase = true
+[push]
+	autoSetupRemote = true
 [commit]
 	gpgsign = true
 	commentchar = "#"
