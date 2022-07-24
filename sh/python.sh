@@ -14,5 +14,5 @@ venv() {
   python3 -m venv venv &&
     . venv/bin/activate &&
     python -m pip install --upgrade pip wheel &&
-    python -m pip install -r requirements.txt
+    [ -f requirements.txt ] && python -m pip install -r requirements.txt
 }
