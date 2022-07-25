@@ -32,7 +32,9 @@ for FILEPATH in "$DATA_DIR"/rsa_key*; do
 done
 
 # compress and encrypt directory with data
-cd "$BACKUPS_DIR" && tar --zstd -cf - "$BACKUP_DIR_BASENAME" | openssl enc -e -aes256 -salt -pbkdf2 -pass "pass:$BACKUP_ENCRYPTION_KEY" -out "$BACKUP_DIR_BASENAME.tar.zst"
+cd "$BACKUPS_DIR" &&
+  tar --zstd -cf - "$BACKUP_DIR_BASENAME" |
+  openssl enc -e -aes256 -salt -pbkdf2 -pass "pass:$BACKUP_ENCRYPTION_KEY" -out "$BACKUP_DIR_BASENAME.tar.zst"
 rm -r "$BACKUP_DIR"
 
 # delete backups older than two days
