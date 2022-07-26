@@ -33,3 +33,11 @@ if type ffmpeg >/dev/null 2>&1; then
   # shellcheck source=./ffmpeg.sh
   [ -f ~/dotfiles/sh/ffmpeg.sh ] && . ~/dotfiles/sh/ffmpeg.sh
 fi
+
+# Find RSS feed from URL of YouTube channels
+# Example usage:
+#   yt_rss https://www.youtube.com/c/JoshuaWeissman
+#   https://www.youtube.com/feeds/videos.xml?channel_id=UChBEbMKI1eCcejTtmI32UEw
+yt_rss() {
+  curl --silent "$1" | htmlq --attribute href "link[title='RSS']"
+}
