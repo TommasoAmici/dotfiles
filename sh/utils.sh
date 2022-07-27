@@ -9,3 +9,7 @@ secret_key() {
   base64 </dev/urandom | head -c "$LENGTH"
   printf "\n"
 }
+
+OPENSSL_FLAGS="-aes256 -salt -pbkdf2 -pass 'pass:${BACKUP_ENCRYPTION_KEY}'"
+alias openssl_decrypt="openssl enc -d ${OPENSSL_FLAGS}"
+alias openssl_encrypt="openssl enc -e ${OPENSSL_FLAGS}"
