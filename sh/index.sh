@@ -11,8 +11,8 @@
 # shellcheck source=./git.sh
 [ -f ~/dotfiles/sh/git.sh ] && . ~/dotfiles/sh/git.sh
 
-# shellcheck source=./random.sh
-[ -f ~/dotfiles/sh/random.sh ] && . ~/dotfiles/sh/random.sh
+# shellcheck source=./utils.sh
+[ -f ~/dotfiles/sh/utils.sh ] && . ~/dotfiles/sh/utils.sh
 
 # shellcheck source=./images.sh
 [ -f ~/dotfiles/sh/images.sh ] && . ~/dotfiles/sh/images.sh
