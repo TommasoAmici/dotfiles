@@ -35,15 +35,16 @@ if type hx >/dev/null 2>&1; then
 fi
 
 if type exa >/dev/null 2>&1; then
-  alias ls="exa --classify --grid --icons"
-  alias tree="exa --tree"
+  alias ls="exa --classify --icons --grid"
+  alias ll='exa --classify --icons --long'
+  alias tree="exa --tree --icons"
 else
   alias ls='ls -FG'
+  alias ll='ls -lh'
 fi
-alias l=ls
-alias ll='l -lh'
+alias l="ls"
 alias la='l -a'
-alias lla='l -alh'
+alias lla='ll -a'
 
 alias mycc="cc -std=c99 -Wall -pedantic -Werror"
 alias m=make
