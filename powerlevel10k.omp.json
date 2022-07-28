@@ -12,7 +12,7 @@
             "style": "mixed"
           },
           "style": "plain",
-          "template": " {{ .Path }} ",
+          "template": "{{ if .Path }} {{ .Path }} {{ else }} / {{end}}",
           "type": "path"
         },
         {
