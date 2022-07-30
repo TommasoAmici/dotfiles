@@ -5,10 +5,52 @@ alias gc="git commit"
 alias gp="git push"
 alias gss="git status"
 
-# Query gitignore.io to automatically generate .gitignore files
-# Example usage: gi node,yarn,git,macos,visualstudiocode > .gitignore
 gi() {
-  curl -L -s "https://www.gitignore.io/api/$1"
+  _help() {
+    echo "Query toptal.com to generate .gitignore files
+
+USAGE:
+  gi [OPTIONS] [LANGUAGES]
+
+EXAMPLE USAGE:
+  gi node,yarn,git,macos,visualstudiocode > .gitignore
+
+ARGS:
+  <LANGUAGES>  Comma separated list of programming languages, IDEs, OSs
+
+OPTIONS:
+  -h  Print help information
+  -i  Run in interactive mode
+"
+  }
+
+  BASE_API=https://www.toptal.com/developers/gitignore/api
+  _list_options() {
+    curl --silent "$BASE_API/list" | tr ',' '\n'
+  }
+  _make_gitignore() {
+    curl --silent "$BASE_API/$1"
+  }
+  while getopts "hi" option; do
+    case $option in
+    i) GI_INTERACTIVE=1 ;;
+    h | *) _help && return ;;
+    esac
+  done
+
+  if [ -n "$GI_INTERACTIVE" ]; then
+    if type fzf >/dev/null 2>&1; then
+      GI_LIST=$(_list_options | fzf --multi | tr '\n' ',')
+      _make_gitignore "$GI_LIST"
+    else
+      log_error "fzf not installed, cannot run gi in interactive mode"
+    fi
+  else
+    GI_LIST=$1
+    _make_gitignore "$GI_LIST"
+  fi
+
+  unset GI_INTERACTIVE
 }
 
 git_reset_one_file() {
