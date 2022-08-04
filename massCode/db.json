@@ -1,0 +1,326 @@
+{
+  "folders": [
+    {
+      "id": "FWpZsdhg",
+      "name": "Default",
+      "defaultLanguage": "typescript",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "createdAt": 1659601548436,
+      "updatedAt": 1659601548436,
+      "index": 0
+    },
+    {
+      "name": "Python",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "python",
+      "id": "zBxaLtiq",
+      "createdAt": 1659602078382,
+      "updatedAt": 1659602092165,
+      "index": 1
+    },
+    {
+      "name": "React",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "typescript",
+      "id": "umEEv1YC",
+      "createdAt": 1659602095347,
+      "updatedAt": 1659602102821
+    },
+    {
+      "name": "Go",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "golang",
+      "id": "zx86Kd_F",
+      "createdAt": 1659602111639,
+      "updatedAt": 1659602121556
+    }
+  ],
+  "snippets": [
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "zBxaLtiq",
+      "tagsIds": [],
+      "description": null,
+      "name": "sort list of tuples",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "data.sort(key=lambda x: x[0])"
+        }
+      ],
+      "id": "l1_w_X4z",
+      "createdAt": 1659601652740,
+      "updatedAt": 1659602086944
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "zBxaLtiq",
+      "tagsIds": [],
+      "description": null,
+      "name": "sort list of dictionaries",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "data.sort(key=lambda x: x[\"key\"])"
+        }
+      ],
+      "id": "zw4_ECO4",
+      "createdAt": 1659601741033,
+      "updatedAt": 1659602086937
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "zBxaLtiq",
+      "tagsIds": [],
+      "description": null,
+      "name": "group by month",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "import itertools\n\ngrouped_by_month = itertools.groupby(\n  data, key=lambda x: x[\"created_at\"].strftime(\"%Y-%m\")\n)"
+        }
+      ],
+      "id": "SlIV1i8Y",
+      "createdAt": 1659601795714,
+      "updatedAt": 1659602086952
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "umEEv1YC",
+      "tagsIds": [],
+      "description": null,
+      "name": "Button forwardRef",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "import classNames from \"classnames\";\nimport { forwardRef } from \"react\";\n\ntype ButtonProps = JSX.IntrinsicAttributes &\n  React.ClassAttributes<HTMLButtonElement> &\n  React.ButtonHTMLAttributes<HTMLButtonElement>;\n\nexport const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {\n  return (\n    <button\n      ref={ref}\n      {...props}\n      className={classNames(\n        \"\",\n        props.className,\n      )}\n    >\n      {props.children}\n    </button>\n  );\n});\nButton.displayName = \"Button\";"
+        }
+      ],
+      "id": "mOcjh8VT",
+      "createdAt": 1659602136952,
+      "updatedAt": 1659602244857
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "umEEv1YC",
+      "tagsIds": [],
+      "description": null,
+      "name": "Link forwardRef",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "import classNames from \"classnames\";\nimport { forwardRef } from \"react\";\n\nexport type AnchorProps = React.HTMLProps<HTMLAnchorElement>;\n\nconst CustomLink = forwardRef<HTMLAnchorElement, AnchorProps>((props, ref) => {\n  return (\n    <a\n      ref={ref}\n      {...props}\n      className={classNames(\n        \"\",\n        props.className,\n      )}\n    >\n      {props.children}\n    </a>\n  );\n});\nCustomLink.displayName = \"CustomLink\";\nexport default CustomLink;\n"
+        }
+      ],
+      "id": "bHFzYPfQ",
+      "createdAt": 1659602258693,
+      "updatedAt": 1659602281697
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "umEEv1YC",
+      "tagsIds": [],
+      "description": null,
+      "name": "Functional component",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "const Component = () => {\n  return <></>;\n});\n\nComponent.displayName = \"Component\";\nexport default Component;\n"
+        }
+      ],
+      "id": "44kUpbAY",
+      "createdAt": 1659602306601,
+      "updatedAt": 1659602375838
+    },
+    {
+      "isDeleted": true,
+      "isFavorites": false,
+      "folderId": "umEEv1YC",
+      "tagsIds": [],
+      "description": null,
+      "name": "Untitled snippet",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": ""
+        }
+      ],
+      "id": "8_jGAAAi",
+      "createdAt": 1659602307964,
+      "updatedAt": 1659602310594
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "umEEv1YC",
+      "tagsIds": [],
+      "description": null,
+      "name": "Card component",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "import classNames from \"classnames\";\n\nconst Card = (\n  props: JSX.IntrinsicAttributes &\n    React.ClassAttributes<HTMLDivElement> &\n    React.InputHTMLAttributes<HTMLDivElement>,\n) => (\n  <div\n    {...props}\n    className={classNames(\n      \"\",\n      props.className,\n    )}\n  >\n    {props.children}\n  </div>\n);\n\nexport default Card;\n"
+        }
+      ],
+      "id": "edc9GmNc",
+      "createdAt": 1659602398449,
+      "updatedAt": 1659602410289
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "umEEv1YC",
+      "tagsIds": [],
+      "description": null,
+      "name": "Input forwardRef",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "import classNames from \"classnames\";\nimport React from \"react\";\n\ntype InputProps = JSX.IntrinsicAttributes &\n  React.ClassAttributes<HTMLInputElement> &\n  React.InputHTMLAttributes<HTMLInputElement>;\n\nexport const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {\n  return (\n    <input\n      ref={ref}\n      {...props}\n      className={classNames(\n        props.className,\n        \"\",\n      )}\n    />\n  );\n});\n\nInput.displayName = \"Input\";\n"
+        }
+      ],
+      "id": "LBKe5Ton",
+      "createdAt": 1659602435255,
+      "updatedAt": 1659602478719
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "umEEv1YC",
+      "tagsIds": [],
+      "description": null,
+      "name": "Checkbox forwardRef",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "import classNames from \"classnames\";\nimport React from \"react\";\n\ntype InputProps = JSX.IntrinsicAttributes &\n  React.ClassAttributes<HTMLInputElement> &\n  React.InputHTMLAttributes<HTMLInputElement>;\n\nexport const Checkbox = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {\n  return (\n    <input\n      ref={ref}\n      type=\"checkbox\"\n      {...props}\n      className={classNames(\n        props.className,\n        \"\",\n      )}\n    />\n  );\n});\nCheckbox.displayName = \"Checkbox\";"
+        }
+      ],
+      "id": "xdHyZgqZ",
+      "createdAt": 1659602495532,
+      "updatedAt": 1659602630059
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "FWpZsdhg",
+      "tagsIds": [],
+      "description": null,
+      "name": "prettier.config.js",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "module.exports = {\n  arrowParens: \"avoid\",\n  tabWidth: 2,\n  printWidth: 100,\n  semi: true,\n  singleQuote: false,\n  trailingComma: \"all\",\n  // plugins: [require(\"prettier-plugin-tailwindcss\")],\n};\n"
+        }
+      ],
+      "id": "WBV4FlzQ",
+      "createdAt": 1659602738691,
+      "updatedAt": 1659602753314
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "FWpZsdhg",
+      "tagsIds": [],
+      "description": null,
+      "name": ".git-blame-ignore-revs",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "gitignore",
+          "value": "# git-blame ignored revisions\n# To configure, run\n#   git config blame.ignoreRevsFile .git-blame-ignore-revs\n# Requires Git > 2.23\n# See https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt\n\n# commit name - commit hash\na55aef90a8a8d18208252acd4a806ecd7d8b27a3\n"
+        }
+      ],
+      "id": "ntKaEtJN",
+      "createdAt": 1659602775777,
+      "updatedAt": 1659602944802
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "FWpZsdhg",
+      "tagsIds": [],
+      "description": null,
+      "name": "tailwind.css",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "css",
+          "value": "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\nhtml,\nbody {\n  @apply m-0 h-full p-0 font-sans;\n  scroll-behavior: smooth;\n}\n"
+        }
+      ],
+      "id": "y9UdMy1S",
+      "createdAt": 1659602920456,
+      "updatedAt": 1659602966450
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "zBxaLtiq",
+      "tagsIds": [],
+      "description": null,
+      "name": "write csv to string",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "import csv\nimport io\n\ndef csv_to_string(data=[]):\n  \"\"\"Returns data in CSV format\"\"\"\n  output = io.StringIO()\n  writer = csv.writer(output)\n  writer.writerows(data)\n  return output.getvalue()"
+        }
+      ],
+      "id": "IfdkDWyg",
+      "createdAt": 1659609765052,
+      "updatedAt": 1659609929843
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "zBxaLtiq",
+      "tagsIds": [],
+      "description": null,
+      "name": "django management command",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "python",
+          "value": "from django.core.management.base import BaseCommand\n\n\nclass Command(BaseCommand):\n    help = \"\"\n\n    def add_arguments(self, parser):\n        parser.add_argument(\n            \"--verbose\",\n            action=\"store_true\",\n            help=\"Enable verbose output\",\n        )\n\n    def handle(self, *args, **options):\n        ...\n"
+        }
+      ],
+      "id": "J-UI4xRQ",
+      "createdAt": 1659620260825,
+      "updatedAt": 1659620277310
+    }
+  ],
+  "tags": [
+    {
+      "name": "python",
+      "id": "QU_nYCkC",
+      "createdAt": 1659601715253,
+      "updatedAt": 1659601715253
+    }
+  ]
+}
