@@ -46,6 +46,7 @@
       "alignment": "right",
       "segments": [
         {
+          "type": "node",
           "background": "#339933",
           "foreground": "#ffffff",
           "properties": {
@@ -53,8 +54,7 @@
             "fetch_package_manager": true
           },
           "style": "plain",
-          "template": "<background,parentBackground></> {{ .Major }} \uf898{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }}{{ end }} ",
-          "type": "node"
+          "template": "<background,parentBackground></> {{ .Major }} \uf898{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }}{{ end }} "
         },
         {
           "type": "r",
@@ -64,11 +64,11 @@
           "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} R "
         },
         {
+          "type": "rust",
           "foreground": "#193549",
           "background": "#99908a",
           "style": "plain",
-          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} \uE7a8 ",
-          "type": "rust"
+          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} \uE7a8 "
         },
         {
           "type": "haskell",
@@ -78,16 +78,17 @@
           "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} \ue61f "
         },
         {
+          "type": "go",
           "background": "#00ADD8",
           "foreground": "#111111",
           "properties": {
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} \ue627 ",
-          "type": "go"
+          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} \ue627 "
         },
         {
+          "type": "python",
           "background": "#FFDE57",
           "foreground": "#111111",
           "properties": {
@@ -95,28 +96,28 @@
             "fetch_virtual_env": true
           },
           "style": "plain",
-          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Major }}.{{ .Minor }}{{ end }} \ue235 ",
-          "type": "python"
+          "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Major }}.{{ .Minor }}{{ end }} \ue235 "
         },
         {
+          "type": "root",
           "background": "#ffff66",
           "foreground": "#111111",
           "invert_powerline": true,
           "style": "plain",
-          "template": "<background,parentBackground></> \uf0ad ",
-          "type": "root"
+          "template": "<background,parentBackground></> \uf0ad "
         },
         {
+          "type": "executiontime",
           "background": "#c4a000",
           "foreground": "#000000",
           "properties": {
             "style": "round"
           },
           "style": "plain",
-          "template": "<background,parentBackground></> {{ .FormattedMs }} \uf252 ",
-          "type": "executiontime"
+          "template": "<background,parentBackground></> {{ .FormattedMs }} \uf252 "
         },
         {
+          "type": "exit",
           "background": "#000000",
           "background_templates": ["{{ if gt .Code 0 }}#cc2222{{ end }}"],
           "foreground": "#d3d7cf",
@@ -124,8 +125,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "<background,parentBackground></> {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} ",
-          "type": "exit"
+          "template": "<background,parentBackground></> {{ if gt .Code 0 }}{{ .Meaning }}{{ else }}\u2714{{ end }} "
         }
       ],
       "type": "rprompt"
