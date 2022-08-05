@@ -46,7 +46,7 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "#689f63",
+          "background": "#339933",
           "foreground": "#ffffff",
           "properties": {
             "fetch_version": true,
@@ -78,7 +78,7 @@
           "template": "<background,parentBackground></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Major  }}.{{ .Minor }}{{ end }} \ue61f "
         },
         {
-          "background": "#00acd7",
+          "background": "#00ADD8",
           "foreground": "#111111",
           "properties": {
             "fetch_version": true
