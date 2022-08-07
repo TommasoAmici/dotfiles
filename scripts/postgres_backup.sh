@@ -30,7 +30,7 @@ for DB in $DATABASES; do
 done
 
 # delete backups older than two days
-find "$BASE_DIR" -mtime +2 -type f -delete
+find "$BACKUP_DIR" -mtime +2 -type f -delete
 
 # To decrypt and uncompress backup run this command
 # openssl enc -d -aes256 -salt -pbkdf2 -pass "pass:$BACKUP_ENCRYPTION_KEY" -in BACKUP_DIR.tar.zst | tar -x
