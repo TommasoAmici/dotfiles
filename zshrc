@@ -1,5 +1,14 @@
 #!/bin/zsh
 
+# prevent duplicates from being stored in history
+# https://unix.stackexchange.com/a/625366
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
