@@ -97,3 +97,5 @@ tldr() {
 if type oh-my-posh >/dev/null 2>&1; then
   eval "$(oh-my-posh init zsh --config ~/dotfiles/powerlevel10k.omp.json)"
 fi
+export PATH="/usr/local/opt/libressl/bin:$PATH"
+
