@@ -70,7 +70,7 @@ export PROJECT_ENV=development
 
 export PATH=~/go/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
-export PATH="/usr/local/opt/node@16/bin:$PATH"
+#export PATH="/usr/local/opt/node@16/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/gnupg@2.2/bin:$PATH"
