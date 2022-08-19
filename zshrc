@@ -66,7 +66,9 @@ alias youtube-dl=yt-dlp
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias firefox="/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox"
 
-function fixgpg() {killall gpg-agent && gpg-agent --daemon --homedir $HOME/.gnupg}
+function fixgpg() {
+  killall gpg-agent && gpg-agent --daemon --homedir $HOME/.gnupg
+}
 
 export PROJECT_ENV=development
 
