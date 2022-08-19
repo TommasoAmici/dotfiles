@@ -30,7 +30,8 @@
       "defaultLanguage": "typescript",
       "id": "umEEv1YC",
       "createdAt": 1659602095347,
-      "updatedAt": 1659602102821
+      "updatedAt": 1659602102821,
+      "index": 2
     },
     {
       "name": "Go",
@@ -40,7 +41,39 @@
       "defaultLanguage": "golang",
       "id": "zx86Kd_F",
       "createdAt": 1659602111639,
-      "updatedAt": 1659602121556
+      "updatedAt": 1659602121556,
+      "index": 3
+    },
+    {
+      "name": "CSS",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "css",
+      "id": "ZwYF6OPe",
+      "createdAt": 1659957234638,
+      "updatedAt": 1659957252233,
+      "index": 4
+    },
+    {
+      "name": "TypeScript",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "typescript",
+      "id": "mkuuYv1u",
+      "createdAt": 1660310399276,
+      "updatedAt": 1660310417459
+    },
+    {
+      "name": "Shell",
+      "parentId": null,
+      "isOpen": false,
+      "isSystem": false,
+      "defaultLanguage": "sh",
+      "id": "QtIEu6Sp",
+      "createdAt": 1660311005556,
+      "updatedAt": 1660508065651
     }
   ],
   "snippets": [
@@ -145,12 +178,12 @@
         {
           "label": "Fragment 1",
           "language": "typescript",
-          "value": "const Component = () => {\n  return <></>;\n});\n\nComponent.displayName = \"Component\";\nexport default Component;\n"
+          "value": "const Component = ({}: {}) => {\n  return <></>;\n};\n\nComponent.displayName = \"Component\";\nexport default Component;\n"
         }
       ],
       "id": "44kUpbAY",
       "createdAt": 1659602306601,
-      "updatedAt": 1659602375838
+      "updatedAt": 1660230794907
     },
     {
       "isDeleted": true,
@@ -181,12 +214,12 @@
         {
           "label": "Fragment 1",
           "language": "typescript",
-          "value": "import classNames from \"classnames\";\n\nconst Card = (\n  props: JSX.IntrinsicAttributes &\n    React.ClassAttributes<HTMLDivElement> &\n    React.InputHTMLAttributes<HTMLDivElement>,\n) => (\n  <div\n    {...props}\n    className={classNames(\n      \"\",\n      props.className,\n    )}\n  >\n    {props.children}\n  </div>\n);\n\nexport default Card;\n"
+          "value": "import classNames from \"classnames\";\nimport { forwardRef } from \"react\";\n\ntype DivProps = JSX.IntrinsicAttributes &\n  React.ClassAttributes<HTMLDivElement> &\n  React.InputHTMLAttributes<HTMLDivElement>;\n\nconst Card = forwardRef<HTMLDivElement, DivProps>((props, ref) => {\n  return (\n    <div\n      {...props}\n      className={classNames(\n        \"rounded-md bg-white px-4 py-2 shadow-lg dark:bg-neutral-800\",\n        props.className,\n      )}\n    >\n      {props.children}\n    </div>\n  );\n});\nCard.displayName = \"Card\";\nexport default Card;\n"
         }
       ],
       "id": "edc9GmNc",
       "createdAt": 1659602398449,
-      "updatedAt": 1659602410289
+      "updatedAt": 1660582295418
     },
     {
       "isDeleted": false,
@@ -263,7 +296,7 @@
     {
       "isDeleted": false,
       "isFavorites": false,
-      "folderId": "FWpZsdhg",
+      "folderId": "ZwYF6OPe",
       "tagsIds": [],
       "description": null,
       "name": "tailwind.css",
@@ -276,7 +309,7 @@
       ],
       "id": "y9UdMy1S",
       "createdAt": 1659602920456,
-      "updatedAt": 1659602966450
+      "updatedAt": 1659963101234
     },
     {
       "isDeleted": false,
@@ -313,6 +346,186 @@
       "id": "J-UI4xRQ",
       "createdAt": 1659620260825,
       "updatedAt": 1659620277310
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "zx86Kd_F",
+      "tagsIds": [],
+      "description": null,
+      "name": "read csv",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "golang",
+          "value": "csvFile, err := os.Open(\"filename.csv\")\nif err != nil {\n  log.Fatal(err)\n}\ndefer csvFile.Close()\n\nreader := csv.NewReader(csvFile)\nrecords, _ := reader.ReadAll()\n"
+        }
+      ],
+      "id": "IuMCti_a",
+      "createdAt": 1659872550258,
+      "updatedAt": 1659872567993
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "ZwYF6OPe",
+      "tagsIds": [],
+      "description": null,
+      "name": "grid center",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "css",
+          "value": ".place-center {\n  display: grid;\n  place-content: center;\n}"
+        }
+      ],
+      "id": "c_xBm0w9",
+      "createdAt": 1659957237663,
+      "updatedAt": 1659957292604
+    },
+    {
+      "isDeleted": true,
+      "isFavorites": false,
+      "folderId": "ZwYF6OPe",
+      "tagsIds": [],
+      "description": null,
+      "name": "grid center example",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "html",
+          "value": "<style>\n  .wrapper {\n    display: grid;\n    place-content: center;\n  }\n</style>\n\n<section>\n  <div class=\"box\">hello world</div>\n</section>\n\n"
+        }
+      ],
+      "id": "e1ONnw0Q",
+      "createdAt": 1659957352044,
+      "updatedAt": 1659957395305
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "ZwYF6OPe",
+      "tagsIds": [],
+      "description": null,
+      "name": "fluid grid",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "css",
+          "value": ".grid {\n  display: grid;\n  gap: 16px;\n  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));\n}"
+        }
+      ],
+      "id": "-sdxuwT_",
+      "createdAt": 1659957433373,
+      "updatedAt": 1659957499590
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "zx86Kd_F",
+      "tagsIds": [],
+      "description": null,
+      "name": "sort slice",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "golang",
+          "value": "s := []int{1, 2, 3, 4}\nsort.SliceStable(s, func(p, q int) bool {\n\treturn s[p] < s[q]\n})"
+        }
+      ],
+      "id": "zavW1Z-d",
+      "createdAt": 1660214168699,
+      "updatedAt": 1660214219247
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "mkuuYv1u",
+      "tagsIds": [],
+      "description": null,
+      "name": "random integer",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "const getRandomInt = (max: number) => Math.floor(Math.random() * max)"
+        }
+      ],
+      "id": "OamvARcu",
+      "createdAt": 1660310418561,
+      "updatedAt": 1660310438759
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "QtIEu6Sp",
+      "tagsIds": [],
+      "description": null,
+      "name": "if elif else",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "sh",
+          "value": "if [  ]; then\n  \nelif [  ]; then\n  \nelse\n  \nfi"
+        }
+      ],
+      "id": "4sCkKYVL",
+      "createdAt": 1660311030023,
+      "updatedAt": 1660311050284
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "mkuuYv1u",
+      "tagsIds": [],
+      "description": null,
+      "name": "read from stdin",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "process.stdin.on(\"data\", data => {\n  const string = data.toString();\n  process.exit();\n});\n"
+        }
+      ],
+      "id": "zq9KkwV9",
+      "createdAt": 1660477166359,
+      "updatedAt": 1660477204579
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "mkuuYv1u",
+      "tagsIds": [],
+      "description": null,
+      "name": "check if file/directory exists",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "typescript",
+          "value": "import fs from \"fs/promises\";\nimport { constants } from \"fs\";\n\ntry {\n  fs.access(pathToFile, constants.F_OK);\n} catch {\n\n}"
+        }
+      ],
+      "id": "slkWVZAM",
+      "createdAt": 1660486509914,
+      "updatedAt": 1660486560330
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "zx86Kd_F",
+      "tagsIds": [],
+      "description": null,
+      "name": "read json file",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "golang",
+          "value": "content, err := ioutil.ReadFile(\"XXX.json\")\nif err != nil {\n\t...\n}\n \nvar payload Data\nerr = json.Unmarshal(content, &payload)\nif err != nil {\n\t...\n}\n "
+        }
+      ],
+      "id": "86LzA9KS",
+      "createdAt": 1660569638218,
+      "updatedAt": 1660569675916
     }
   ],
   "tags": [
