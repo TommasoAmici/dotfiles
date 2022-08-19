@@ -18,6 +18,12 @@ if [ "$(uname)" = "Darwin" ]; then
   brew bundle --file "$DOTFILES/Brewfile"
 fi
 
+# set up rust
+rustup-init && cargo install cargo-update
+
+# set up haskell
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
 # set up vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
