@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+DOTFILES="$HOME/dotfiles"
+
 # prevent duplicates from being stored in history
 # https://unix.stackexchange.com/a/625366
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -81,7 +83,7 @@ if type zoxide >/dev/null 2>&1; then
   eval "$(zoxide init zsh --cmd cd)"
 fi
 
-export TEALDEER_CONFIG_DIR=~/dotfiles/tealdeer
+export TEALDEER_CONFIG_DIR="$DOTFILES/tealdeer"
 tldr() {
   /usr/local/bin/tldr "$1" || /usr/local/bin/tldr -p linux "$1"
 }
@@ -92,10 +94,10 @@ tldr() {
 [ -f ~/.ghcup/env ] && source ~/.ghcup/env # ghcup-env
 
 [ -f ~/.secrets.sh ] && . ~/.secrets.sh
-[ -f ~/dotfiles/sh/index.sh ] && . ~/dotfiles/sh/index.sh
+[ -f "$DOTFILES/sh/index.sh" ] && . "$DOTFILES/sh/index.sh"
 
 if type oh-my-posh >/dev/null 2>&1; then
-  eval "$(oh-my-posh init zsh --config ~/dotfiles/powerlevel10k.omp.json)"
+  eval "$(oh-my-posh init zsh --config $DOTFILES/powerlevel10k.omp.json)"
 fi
 export PATH="/usr/local/opt/libressl/bin:$PATH"
 
