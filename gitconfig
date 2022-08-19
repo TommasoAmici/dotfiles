@@ -25,3 +25,6 @@
 	status = auto
 [diff]
 	algorithm = histogram
+[core]
+	excludesFile = ~/.gitignore
+	fsmonitor = false
