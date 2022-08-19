@@ -4,6 +4,8 @@
 	signingKey = 120EC3D3A10F709EABC3169023898183A6B97D93
 [includeIf "gitdir:~/dev/personal/"]
 	path = ~/.gitconfig-personal
+[includeIf "gitdir:~/dotfiles/"]
+	path = ~/.gitconfig-personal
 [pull]
 	rebase = true
 [push]
