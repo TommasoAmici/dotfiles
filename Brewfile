@@ -111,6 +111,8 @@ brew "gtk+3"
 brew "hadolint"
 # HTTP load generator, ApacheBench (ab) replacement
 brew "hey"
+# Uses CSS selectors to extract bits content from HTML files
+brew "htmlq"
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
