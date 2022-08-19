@@ -13,6 +13,20 @@ secret_key() {
 OPENSSL_FLAGS="-aes256 -salt -pbkdf2 -pass 'pass:${BACKUP_ENCRYPTION_KEY}'"
 alias openssl_decrypt="openssl enc -d ${OPENSSL_FLAGS}"
 alias openssl_encrypt="openssl enc -e ${OPENSSL_FLAGS}"
+
+curl_cache() {
+  PAGE=$(redis-cli GET "$1")
+  if [ -z "$PAGE" ]; then
+    curl --silent "$1" >_tmp
+    redis-cli -x SET "$1" <_tmp >/dev/null
+    redis-cli EXPIRE "$1" 86400 >/dev/null
+    rm _tmp
+
+    PAGE=$(redis-cli GET "$1")
+  fi
+  echo "$PAGE"
+}
+
 progress_bar() {
   _help() {
     echo "Print a progress bar, overwriting previous row.
