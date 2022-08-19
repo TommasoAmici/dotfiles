@@ -7,6 +7,8 @@ DOTFILES="$HOME/dotfiles"
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 rm -f ~/.zshrc && ln -s "$DOTFILES/zshrc" ~/.zshrc
 
+rm -f ~/.ssh/config && ln -s "$DOTFILES/ssh/config" ~/.ssh/config
+
 if [ "$(uname)" = "Darwin" ]; then
   xcode-select --install
   # install homebrew
