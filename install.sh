@@ -1,53 +1,43 @@
-#!/bin/bash
-if [[ "$OSTYPE" == "linux"* ]]; then
+#!/bin/sh
+# macOS installation script
 
-  # install packages
-  # git repository
-  sudo add-apt-repository ppa:git-core/ppa
+DOTFILES="$HOME/dotfiles"
 
-  # update packages
-  sudo apt-get update
-  sudo apt-get upgrade -y
-  sudo apt-get dist-upgrade
+# set up zsh
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+rm -f ~/.zshrc && ln -s "$DOTFILES/zshrc" ~/.zshrc
 
-  sudo apt-get install git python3 python3-pip vim zsh
-
-  # nodejs
-  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-  sudo apt-get install -y nodejs
-  npm install --global yarn
-
-  # ripgrep
-  curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep_0.8.1_amd64.deb
-  sudo dpkg -i ripgrep_0.8.1_amd64.deb
-fi
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  # macOS
+if [ "$(uname)" = "Darwin" ]; then
   xcode-select --install
   # install homebrew
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   brew update
-  brew bundle
+  brew bundle --file "$DOTFILES/Brewfile"
 fi
-# platform agnostic
-# update python packages
-pip install --upgrade setuptools
-pip install --upgrade pip
-
-# get dotfiles
-git clone https://github.com/TommasoAmici/dotfiles.git
-rm .vimrc .zshrc
 
 # set up vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-ln -s dotfiles/vim/vimrc ~/.vimrc
+rm -f ~/.vimrc && ln -s "$DOTFILES/vim/vimrc" ~/.vimrc
 
-# set up zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-curl -L git.io/antigen >antigen.zsh
+ln -s "$DOTFILES/gitconfig" ~/.gitconfig
+ln -s "$DOTFILES/gitconfig-personal" ~/.gitconfig-personal
 
-ln -s dotfiles/zshrc ~/.zshrc
-ln -s dotfiles/gitconfig ~/.gitconfig
-ln -s dotfiles/gitconfig-personal ~/.gitconfig-personal
+# link topgrade config
+rm -f ~/.config/topgrade.toml &&
+  ln -s "$DOTFILES/topgrade.toml" ~/.config/topgrade.toml
+
+# link helix config
+mkdir -p ~/.config/helix && rm -f ~/.config/helix/config.toml &&
+  ln -s "$DOTFILES/helix/config.toml" ~/.config/helix/config.toml
+
+topgrade
+
+# clone repos from github
+if [ -z "$GITHUB_TOKEN" ]; then
+  REPOS_DIR="$HOME/dev/personal"
+  mkdir -p "$REPOS_DIR" &&
+    ghorg clone TommasoAmici --clone-type=user --token="$GITHUB_TOKEN" \
+      --output-dir="$REPOS_DIR" --skip-forks
+fi
