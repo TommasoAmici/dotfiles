@@ -49,3 +49,9 @@ if [ -z "$GITHUB_TOKEN" ]; then
     ghorg clone TommasoAmici --clone-type=user --token="$GITHUB_TOKEN" \
       --output-dir="$REPOS_DIR" --skip-forks
 fi
+
+# add cronjobs
+(
+  crontab -l
+  echo "0 * * * * sh ~/dotfiles/scripts/organize_downloads.sh"
+) | sort | uniq | crontab -
