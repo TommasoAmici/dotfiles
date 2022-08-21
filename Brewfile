@@ -143,6 +143,8 @@ brew "lorem"
 brew "make"
 # Modern and intuitive terminal-based text editor
 brew "micro"
+# Intercept, modify, replay, save HTTP/S traffic
+brew "mitmproxy"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
 # Media player based on MPlayer and mplayer2
@@ -259,6 +261,8 @@ brew "samuelmeuli/tap/tmignore"
 brew "stripe/stripe-cli/stripe"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
+# Professional desktop publishing software
+cask "affinity-publisher"
 # GraphQL client
 cask "altair-graphql-client"
 # Application uninstaller
@@ -294,6 +298,8 @@ cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 # Font editor and converter for outline and bitmap fonts
 cask "fontforge"
+# GIT client
+cask "fork"
 cask "fritzing"
 # Free and open-source media player
 cask "iina"
@@ -305,6 +311,8 @@ cask "inkscape"
 cask "insomnia"
 # Tool to scan a website checking for broken links
 cask "integrity"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
 # Open-source screen recorder built with web technology
 cask "kap"
 # File archiver
@@ -328,6 +336,8 @@ cask "namechanger"
 cask "obs"
 # Image optimization tool
 cask "optimage"
+# Utility to take screenshots of webpages
+cask "paparazzi"
 # Colour picker for colours onscreen
 cask "pika"
 # Browse, manage, inspect containers and images
@@ -344,6 +354,8 @@ cask "redis-stack-server"
 cask "shifty"
 # Native Discord client built in Swift
 cask "swiftcord"
+# Messaging app with a focus on speed and security
+cask "telegram"
 # Menu bar pomodoro timer
 cask "tomatobar"
 # Web browser focusing on security
@@ -352,5 +364,9 @@ cask "tor-browser"
 cask "transmission"
 # Virtual machines UI using QEMU
 cask "utm"
+# Open-source code editor
+cask "visual-studio-code"
+# Install and switch between multiple versions of Xcode
+cask "xcodes"
 # Open-source version of the X.Org X Window System
 cask "xquartz"
