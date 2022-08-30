@@ -20,6 +20,7 @@ tap "nektos/tap"
 tap "redis-stack/redis-stack"
 tap "samuelmeuli/tap"
 tap "stripe/stripe-cli"
+tap "tg44/heptapod"
 tap "thought-machine/please"
 # Image manipulation library
 brew "jpeg", link: true
@@ -180,7 +181,7 @@ brew "podman"
 # Python package management tool
 brew "poetry"
 # Object-relational database system
-brew "postgresql", restart_service: true
+brew "postgresql@14"
 # Python 3 bindings for the Cairo graphics library
 brew "py3cairo"
 # GNOME Python bindings (based on GObject Introspection)
@@ -259,6 +260,8 @@ brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 brew "samuelmeuli/tap/tmignore"
 # Stripe CLI utility
 brew "stripe/stripe-cli/stripe"
+# This is a command line application to manage and fine-tune Time Machine exclude paths.
+brew "tg44/heptapod/heptapod"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # Professional desktop publishing software
@@ -300,7 +303,6 @@ cask "font-jetbrains-mono-nerd-font"
 cask "fontforge"
 # GIT client
 cask "fork"
-cask "fritzing"
 # Free and open-source media player
 cask "iina"
 # Tool to optimize images to a smaller size
@@ -317,8 +319,6 @@ cask "iterm2"
 cask "kap"
 # File archiver
 cask "keka"
-# Open source code editor written in Rust
-cask "lapce"
 # Utility that shows the latest app updates
 cask "latest"
 # Open-source code snippets manager for developers
@@ -364,8 +364,6 @@ cask "tor-browser"
 cask "transmission"
 # Virtual machines UI using QEMU
 cask "utm"
-# Open-source code editor
-cask "visual-studio-code"
 # Install and switch between multiple versions of Xcode
 cask "xcodes"
 # Open-source version of the X.Org X Window System
