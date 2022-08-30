@@ -19,7 +19,9 @@ fd --type file --change-older-than 3d --size="-700m" --exact-depth 1 -e mp4 -e m
   --exec-batch mv "{}" ~/Downloads/Videos
 
 # find and collect images
-mkdir -p ~/Downloads/Pictures
+mkdir -p ~/Downloads/Pictures/DALL·E
+fd "DALL·E" --type file --change-older-than 3d --exact-depth 1 \
+  --exec-batch mv "{}" ~/Downloads/Pictures/DALL·E
 fd --type file --change-older-than 3d --exact-depth 1 -e heic -e png -e jpg -e jpeg -e webp -e avif -e nef \
   --exec-batch mv "{}" ~/Downloads/Pictures
 
