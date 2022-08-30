@@ -526,6 +526,24 @@
       "id": "86LzA9KS",
       "createdAt": 1660569638218,
       "updatedAt": 1660569675916
+    },
+    {
+      "isDeleted": false,
+      "isFavorites": false,
+      "folderId": "FWpZsdhg",
+      "tagsIds": [],
+      "description": null,
+      "name": "main.tex",
+      "content": [
+        {
+          "label": "Fragment 1",
+          "language": "latex",
+          "value": "\\documentclass[12pt, a4paper]{article}\n\n\\usepackage{graphicx}\n\\usepackage{setspace}\n\\usepackage{etoolbox}\n\\usepackage{float}\n\n% PARAGRAPHS AS SUBSUBSUBSECTIONS\n% https://tex.stackexchange.com/a/60218\n\\makeatletter\n\\renewcommand\\paragraph{\\@startsection{paragraph}{4}{\\z@}%\n            {-2.5ex\\@plus -1ex \\@minus -.25ex}%\n            {1.25ex \\@plus .25ex}%\n            {\\normalfont\\normalsize\\bfseries}}\n\\makeatother\n\\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to\n\\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC\n\n% TABLES\n\\usepackage{tabularx}\n\\usepackage{booktabs}\n\n% STYLE\n\\usepackage[pdfborder={0 0 0}]{hyperref}\n\\usepackage[margin=1in]{geometry}\n\\usepackage{numprint}\n\n% BIBLIOGRAPHY\n\\usepackage{apacite} % after hyperref\n\n\\title{XXX}\n\\author{XXX}\n\n\\begin{document}\n\n\\section{First section}\n\n\\newpage\n\\bibliographystyle{apacite}\n\\bibliography{references}\n\\end{document}\n"
+        }
+      ],
+      "id": "hYNzLO8t",
+      "createdAt": 1660926144080,
+      "updatedAt": 1660926309598
     }
   ],
   "tags": [
