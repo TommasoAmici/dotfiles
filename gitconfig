@@ -6,6 +6,8 @@
 	path = ~/.gitconfig-personal
 [includeIf "gitdir:~/dotfiles/"]
 	path = ~/.gitconfig-personal
+[branch]
+	autosetuprebase = always
 [pull]
 	rebase = true
 [push]
