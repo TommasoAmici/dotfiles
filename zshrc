@@ -82,7 +82,7 @@ fi
 
 export TEALDEER_CONFIG_DIR="$DOTFILES/tealdeer"
 tldr() {
-  /usr/local/bin/tldr "$1" || /usr/local/bin/tldr -p linux "$1"
+  /opt/homebrew/bin/tldr "$1" || /opt/homebrew/bin/tldr -p linux "$1"
 }
 
 # opam configuration
