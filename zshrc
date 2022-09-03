@@ -90,7 +90,7 @@ tldr() {
 # haskell configuration
 [ -f ~/.ghcup/env ] && source ~/.ghcup/env # ghcup-env
 
-[ -f ~/.secrets.sh ] && . ~/.secrets.sh
+[ -f "$DOTFILES/secrets.sh" ] && . "$DOTFILES/secrets.sh"
 [ -f "$DOTFILES/sh/index.sh" ] && . "$DOTFILES/sh/index.sh"
 
 if type oh-my-posh >/dev/null 2>&1; then
