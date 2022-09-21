@@ -31,7 +31,7 @@
             "fetch_upstream_icon": true
           },
           "style": "plain",
-          "template": "<parentBackground,background></> {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }} ",
+          "template": "<parentBackground,background></> {{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }} ",
           "type": "git"
         },
         {
