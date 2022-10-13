@@ -67,12 +67,12 @@ function fixgpg() {
 
 export PROJECT_ENV=development
 
+export PATH=~/.local/bin:$PATH
+export PATH=~/dotfiles/scripts:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
-#export PATH="/usr/local/opt/node@16/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export PATH="/usr/local/opt/gnupg@2.2/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
 # zoxide and fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -96,7 +96,7 @@ tldr() {
 if type oh-my-posh >/dev/null 2>&1; then
   eval "$(oh-my-posh init zsh --config $DOTFILES/powerlevel10k.omp.json)"
 fi
-export PATH="/usr/local/opt/libressl/bin:$PATH"
+export PATH="/opt/homebrew/opt/libressl/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="~/Library/pnpm"
