@@ -2,6 +2,11 @@
 
 DOTFILES="$HOME/dotfiles"
 
+# increase size of history
+HISTSIZE=99999  
+HISTFILESIZE=99999 
+SAVEHIST=$HISTSIZE
+
 # prevent duplicates from being stored in history
 # https://unix.stackexchange.com/a/625366
 setopt HIST_EXPIRE_DUPS_FIRST
