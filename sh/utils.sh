@@ -48,7 +48,7 @@ OPTIONS:
 "
   }
 
-  while getopts "hi" option; do
+  while getopts "h" option; do
     case $option in
     h | *) _help && return ;;
     esac
