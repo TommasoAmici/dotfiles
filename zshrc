@@ -77,8 +77,10 @@ export PATH=~/.local/bin:$PATH
 export PATH=~/dotfiles/scripts:$PATH
 export PATH=~/go/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
-export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+export PATH="$(brew --prefix node@16)/bin:$PATH"
+export PATH="$(brew --prefix sqlite)/bin:$PATH"
+export PATH="$(brew --prefix libressl)/bin:$PATH"
+export PATH="$(brew --prefix curl)/bin:$PATH"
 
 # zoxide and fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -88,7 +90,7 @@ fi
 
 export TEALDEER_CONFIG_DIR="$DOTFILES/tealdeer"
 tldr() {
-  /opt/homebrew/bin/tldr "$1" || /opt/homebrew/bin/tldr -p linux "$1"
+  "$(brew --prefix)/bin/tldr" "$1" || "$(brew --prefix)/bin/tldr" -p linux "$1"
 }
 
 # opam configuration
@@ -102,7 +104,6 @@ tldr() {
 if type oh-my-posh >/dev/null 2>&1; then
   eval "$(oh-my-posh init zsh --config $DOTFILES/powerlevel10k.omp.json)"
 fi
-export PATH="/opt/homebrew/opt/libressl/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="~/Library/pnpm"
