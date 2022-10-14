@@ -3,8 +3,8 @@
 DOTFILES="$HOME/dotfiles"
 
 # increase size of history
-HISTSIZE=99999  
-HISTFILESIZE=99999 
+HISTSIZE=99999
+HISTFILESIZE=99999
 SAVEHIST=$HISTSIZE
 
 # prevent duplicates from being stored in history
