@@ -3,7 +3,6 @@ export PYTHONUNBUFFERED=1
 export PYTHONDONTWRITEBYTECODE=1
 
 alias p=python3
-alias sv="source venv/bin/activate"
 alias de=deactivate
 alias ipython='p -m IPython'
 alias pip='p -m pip'
@@ -15,4 +14,9 @@ venv() {
     . venv/bin/activate &&
     python -m pip install --upgrade wheel &&
     [ -f requirements.txt ] && python -m pip install -r requirements.txt
+}
+
+sv() {
+  [ -d venv ] && . venv/bin/activate
+  [ -d .venv ] && . .venv/bin/activate
 }
