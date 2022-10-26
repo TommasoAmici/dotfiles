@@ -32,3 +32,5 @@
 [core]
 	excludesFile = ~/.gitignore
 	fsmonitor = false
+[rebase]
+	updateRefs = true
