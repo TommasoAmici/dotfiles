@@ -65,3 +65,20 @@ OPTIONS:
   [ "$CURRENT" = "$TOTAL" ] && TIP=""
   printf "%${PAD}s/%s %s%s\r" "$CURRENT" "$TOTAL" "$BAR" "$TIP"
 }
+
+fixgpg() {
+  killall gpg-agent && gpg-agent --daemon --homedir "$HOME/.gnupg"
+}
+
+# Find RSS feed from URL of YouTube channels
+# Example usage:
+#   yt_rss https://www.youtube.com/c/JoshuaWeissman
+#   https://www.youtube.com/feeds/videos.xml?channel_id=UChBEbMKI1eCcejTtmI32UEw
+yt_rss() {
+  curl --silent "$1" | htmlq --attribute href "link[title='RSS']"
+}
+
+export TEALDEER_CONFIG_DIR="$DOTFILES/tealdeer"
+tldr() {
+  "$(brew --prefix)/bin/tldr" "$1" || "$(brew --prefix)/bin/tldr" -p linux "$1"
+}

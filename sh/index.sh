@@ -2,42 +2,48 @@
 
 # This index file appropriately loads all other files from the sh/ directory
 
+DOTFILES="$HOME/dotfiles"
+
+# shellcheck source=./aliases.sh
+[ -f "$DOTFILES/sh/aliases.sh" ] && . "$DOTFILES/sh/aliases.sh"
+
+# shellcheck source=./environment.sh
+[ -f "$DOTFILES/sh/environment.sh" ] && . "$DOTFILES/sh/environment.sh"
+
 # shellcheck source=./log.sh
-[ -f ~/dotfiles/sh/log.sh ] && . ~/dotfiles/sh/log.sh
+[ -f "$DOTFILES/sh/log.sh" ] && . "$DOTFILES/sh/log.sh"
 
 # shellcheck source=./env.sh
-[ -f ~/dotfiles/sh/env.sh ] && . ~/dotfiles/sh/env.sh
+[ -f "$DOTFILES/sh/env.sh" ] && . "$DOTFILES/sh/env.sh"
 
 # shellcheck source=./git.sh
-[ -f ~/dotfiles/sh/git.sh ] && . ~/dotfiles/sh/git.sh
+[ -f "$DOTFILES/sh/git.sh" ] && . "$DOTFILES/sh/git.sh"
 
 # shellcheck source=./utils.sh
-[ -f ~/dotfiles/sh/utils.sh ] && . ~/dotfiles/sh/utils.sh
+[ -f "$DOTFILES/sh/utils.sh" ] && . "$DOTFILES/sh/utils.sh"
 
 # shellcheck source=./images.sh
-[ -f ~/dotfiles/sh/images.sh ] && . ~/dotfiles/sh/images.sh
+[ -f "$DOTFILES/sh/images.sh" ] && . "$DOTFILES/sh/images.sh"
 
 # shellcheck source=./python.sh
-[ -f ~/dotfiles/sh/python.sh ] && . ~/dotfiles/sh/python.sh
+[ -f "$DOTFILES/sh/python.sh" ] && . "$DOTFILES/sh/python.sh"
 
 # shellcheck source=./semgrep.sh
-[ -f ~/dotfiles/sh/semgrep.sh ] && . ~/dotfiles/sh/semgrep.sh
+[ -f "$DOTFILES/sh/semgrep.sh" ] && . "$DOTFILES/sh/semgrep.sh"
 
 # shellcheck source=./tar.sh
-[ -f ~/dotfiles/sh/tar.sh ] && . ~/dotfiles/sh/tar.sh
+[ -f "$DOTFILES/sh/tar.sh" ] && . "$DOTFILES/sh/tar.sh"
 
 # shellcheck source=./twitter.sh
-[ -f ~/dotfiles/sh/twitter.sh ] && . ~/dotfiles/sh/twitter.sh
+[ -f "$DOTFILES/sh/twitter.sh" ] && . "$DOTFILES/sh/twitter.sh"
 
 if type ffmpeg >/dev/null 2>&1; then
   # shellcheck source=./ffmpeg.sh
-  [ -f ~/dotfiles/sh/ffmpeg.sh ] && . ~/dotfiles/sh/ffmpeg.sh
+  [ -f "$DOTFILES/sh/ffmpeg.sh" ] && . "$DOTFILES/sh/ffmpeg.sh"
 fi
 
-# Find RSS feed from URL of YouTube channels
-# Example usage:
-#   yt_rss https://www.youtube.com/c/JoshuaWeissman
-#   https://www.youtube.com/feeds/videos.xml?channel_id=UChBEbMKI1eCcejTtmI32UEw
-yt_rss() {
-  curl --silent "$1" | htmlq --attribute href "link[title='RSS']"
-}
+# shellcheck source=./secrets.sh
+[ -f "$DOTFILES/secrets.sh" ] && . "$DOTFILES/sh/secrets.sh"
+
+# haskell configuration
+[ -f ~/.ghcup/env ] && . "$HOME/.ghcup/env"

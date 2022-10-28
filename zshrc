@@ -29,86 +29,26 @@ plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-# Setting for the new UTF-8 terminal support in Lion
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-export EDITOR='vim'
-
-export GPG_TTY=$(tty)
-
-# aliases
-alias c=clear
-
-if type hx >/dev/null 2>&1; then
-  alias vim=hx
-fi
-
-if type exa >/dev/null 2>&1; then
-  alias ls="exa --classify --icons --grid"
-  alias ll='exa --classify --icons --long'
-  alias tree="exa --tree --icons"
-else
-  alias ls='ls -FG'
-  alias ll='ls -lh'
-fi
-alias l="ls"
-alias la='l -a'
-alias lla='ll -a'
-
-alias mycc="cc -std=c99 -Wall -pedantic -Werror"
-alias m=make
-alias mc="make clean"
-alias mr="make run"
-alias bs='browser-sync start -c bs-config.js'
-alias youtube-dl=yt-dlp
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias firefox="/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox"
-
-function fixgpg() {
-  killall gpg-agent && gpg-agent --daemon --homedir $HOME/.gnupg
-}
-
-export PROJECT_ENV=development
-
-export PATH=~/.local/bin:$PATH
-export PATH=~/dotfiles/scripts:$PATH
-export PATH=~/go/bin:$PATH
-export PATH=~/.cargo/bin:$PATH
-export PATH="$(brew --prefix node@16)/bin:$PATH"
-export PATH="$(brew --prefix sqlite)/bin:$PATH"
-export PATH="$(brew --prefix libressl)/bin:$PATH"
-export PATH="$(brew --prefix curl)/bin:$PATH"
-
 # zoxide and fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if type zoxide >/dev/null 2>&1; then
   eval "$(zoxide init zsh --cmd cd)"
 fi
 
-export TEALDEER_CONFIG_DIR="$DOTFILES/tealdeer"
-tldr() {
-  "$(brew --prefix)/bin/tldr" "$1" || "$(brew --prefix)/bin/tldr" -p linux "$1"
-}
+[ -f "$DOTFILES/sh/index.sh" ] && . "$DOTFILES/sh/index.sh"
 
 # opam configuration
 [ -f ~/.opam/opam-init/init.zsh ] && source ~/.opam/opam-init/init.zsh
-# haskell configuration
-[ -f ~/.ghcup/env ] && source ~/.ghcup/env # ghcup-env
 
-[ -f "$DOTFILES/secrets.sh" ] && . "$DOTFILES/secrets.sh"
-[ -f "$DOTFILES/sh/index.sh" ] && . "$DOTFILES/sh/index.sh"
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$GCP_HOME/completion.zsh.inc" ]; then
+  . "$GCP_HOME/completion.zsh.inc"
+fi
 
 if type oh-my-posh >/dev/null 2>&1; then
   eval "$(oh-my-posh init zsh --config $DOTFILES/powerlevel10k.omp.json)"
 fi
-
-# pnpm
-export PNPM_HOME="~/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
