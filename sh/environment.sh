@@ -1,4 +1,7 @@
 #!/bin/sh
+
+DOTFILES="$HOME/dotfiles"
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 # Setting for the new UTF-8 terminal support in Lion
@@ -26,3 +29,6 @@ _POSTGRES15_PATH="$(brew --prefix postgresql@15)/bin:$PATH"
 export PATH="$_NODE_PATH:$_SQLITE_PATH:$_LIBRESSL_PATH:$_CURL_PATH:$_PYTHON311_PATH:$_POSTGRES15_PATH:$PATH"
 
 export PATH=~/.rustup/toolchains/stable-aarch64-apple-darwin/bin:"$PATH"
+
+export ATUIN_CONFIG_DIR="$DOTFILES/atuin"
+
