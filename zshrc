@@ -52,3 +52,9 @@ fi
 if type oh-my-posh >/dev/null 2>&1; then
   eval "$(oh-my-posh init zsh --config $DOTFILES/powerlevel10k.omp.json)"
 fi
+
+if type atuin >/dev/null 2>&1; then
+  export ATUIN_NOBIND="true"
+  eval "$(atuin init zsh)"
+  bindkey '^r' _atuin_search_widget
+fi

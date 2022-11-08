@@ -36,6 +36,8 @@ brew "asciinema"
 brew "gettext"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Improved shell history for zsh and bash
+brew "atuin"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Terminal bandwidth utilization tool
