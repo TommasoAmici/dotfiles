@@ -30,7 +30,7 @@
 [diff]
 	algorithm = histogram
 [core]
-	excludesFile = ~/.gitignore
+	excludesFile = ~/dotfiles/gitignore
 	fsmonitor = false
 [rebase]
 	updateRefs = true
