@@ -24,40 +24,45 @@ LOG_LEVEL_WARNING=2
 export LOG_LEVEL=0
 
 print_color() {
-  COLOR=$1
-  MSG=$2
-  printf "\033[${COLOR}m%s\033[0m\n" "$MSG"
+  LEVEL=$1
+  COLOR=$2
+  MSG=$3
+  if [ -z "$NO_COLOR" ]; then
+    printf "\033[${COLOR}m%s\033[0m: %s\n" "$LEVEL" "$MSG"
+  else
+    printf "%s: %s\n" "$LEVEL" "$MSG"
+  fi
 }
 
 # Prints in red. Usage: log_error "hello world"
 log_error() {
-  print_color $RED_BOLD "$1"
+  print_color "ERROR" $RED_BOLD "$1" >&2
 }
 
 # Prints debug information. Usage: log_debug "hello world"
 log_debug() {
   if [ $LOG_LEVEL -le $LOG_LEVEL_DEBUG ]; then
-    echo "$1"
+    printf "DEBUG: %s\n" "$1"
   fi
 }
 
 # Prints in green, level info. Usage: log_success "hello world"
 log_success() {
   if [ $LOG_LEVEL -le $LOG_LEVEL_INFO ]; then
-    print_color $GREEN_BOLD "$1"
+    print_color "INFO" $GREEN_BOLD "$1"
   fi
 }
 
 # Prints in blue. Usage: log_info "hello world"
 log_info() {
   if [ $LOG_LEVEL -le $LOG_LEVEL_INFO ]; then
-    print_color $BLUE "$1"
+    print_color "INFO" $BLUE "$1"
   fi
 }
 
 # Prints a warning in orange. Usage: log_warning "hello world"
 log_warning() {
   if [ $LOG_LEVEL -le $LOG_LEVEL_WARNING ]; then
-    print_color $YELLOW "$1"
+    print_color "WARN" $YELLOW "$1" >&2
   fi
 }
