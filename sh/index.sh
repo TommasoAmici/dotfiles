@@ -43,7 +43,7 @@ if type ffmpeg >/dev/null 2>&1; then
 fi
 
 # shellcheck source=./secrets.sh
-[ -f "$DOTFILES/secrets.sh" ] && . "$DOTFILES/sh/secrets.sh"
+[ -f "$DOTFILES/sh/secrets.sh" ] && . "$DOTFILES/sh/secrets.sh"
 
 # haskell configuration
 [ -f ~/.ghcup/env ] && . "$HOME/.ghcup/env"
