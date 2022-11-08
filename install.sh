@@ -6,6 +6,7 @@ DOTFILES="$HOME/dotfiles"
 # set up zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 rm -f ~/.zshrc && ln -s "$DOTFILES/zshrc" ~/.zshrc
+rm -f ~/.bashrc && ln -s "$DOTFILES/bashrc" ~/.bashrc
 
 rm -f ~/.ssh/config && ln -s "$DOTFILES/ssh/config" ~/.ssh/config
 
