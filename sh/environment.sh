@@ -30,6 +30,9 @@ export PATH="$_NODE_PATH:$_SQLITE_PATH:$_LIBRESSL_PATH:$_CURL_PATH:$_PYTHON311_P
 
 export PATH=~/.rustup/toolchains/stable-aarch64-apple-darwin/bin:"$PATH"
 
+export PNPM_HOME="$HOME/.pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 export ATUIN_CONFIG_DIR="$DOTFILES/atuin"
 
 export BROWSER=none
