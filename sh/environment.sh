@@ -32,3 +32,5 @@ export PATH=~/.rustup/toolchains/stable-aarch64-apple-darwin/bin:"$PATH"
 
 export ATUIN_CONFIG_DIR="$DOTFILES/atuin"
 
+export BROWSER=none
+
