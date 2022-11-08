@@ -104,3 +104,9 @@ git_fsmonitor_all() {
   done
   cd "$CURRENT_DIR" || return
 }
+
+# Returns the name of the default branch in the current repo
+git_default_branch() {
+  _SYMBOLIC_REF=$(git symbolic-ref refs/remotes/origin/HEAD)
+  printf "%s" "${_SYMBOLIC_REF#refs/remotes/origin/}"
+}
