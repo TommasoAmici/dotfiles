@@ -17,11 +17,7 @@ alias openssl_encrypt="openssl enc -e ${OPENSSL_FLAGS}"
 curl_cache() {
   PAGE=$(redis-cli GET "$1")
   if [ -z "$PAGE" ]; then
-    curl --silent "$1" >_tmp
-    redis-cli -x SET "$1" <_tmp >/dev/null
-    redis-cli EXPIRE "$1" 86400 >/dev/null
-    rm _tmp
-
+    curl --silent "$1" | redis-cli -x SETEX 86400 "$EXPIRE"
     PAGE=$(redis-cli GET "$1")
   fi
   echo "$PAGE"
