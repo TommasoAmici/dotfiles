@@ -78,3 +78,8 @@ export TEALDEER_CONFIG_DIR="$DOTFILES/tealdeer"
 tldr() {
   "$(brew --prefix)/bin/tldr" "$1" || "$(brew --prefix)/bin/tldr" -p linux "$1"
 }
+
+# date_iso returns the current date in ISO format
+date_iso() {
+  date -u +%Y-%m-%dT%H:%M:%SZ
+}
