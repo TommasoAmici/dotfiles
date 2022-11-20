@@ -37,3 +37,4 @@ export ATUIN_CONFIG_DIR="$DOTFILES/atuin"
 
 export BROWSER=none
 
+export BAT_THEME=base16
