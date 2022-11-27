@@ -29,7 +29,7 @@
             "fetch_status": true
           },
           "style": "plain",
-          "template": "<parentBackground,background></> {{ .HEAD | replace \"feature/\" \"\" | replace \"fix/\" \"\" | abbrev 20 }} ",
+          "template": "<parentBackground,background></> {{ regexReplaceAll \"(feature|feat|fix|chore|style|docs|build)/\" .HEAD \"\" | abbrev 20 }} ",
           "type": "git"
         },
         {
