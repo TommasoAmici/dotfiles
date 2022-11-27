@@ -50,11 +50,10 @@
           "background": "#339933",
           "foreground": "#ffffff",
           "properties": {
-            "fetch_version": true,
-            "fetch_package_manager": true
+            "fetch_version": true
           },
           "style": "plain",
-          "template": "<background,parentBackground></> {{ .Major }} \uf898{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }}{{ end }} "
+          "template": "<background,parentBackground></> {{ .Major }} \uf898 "
         },
         {
           "type": "r",
