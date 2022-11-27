@@ -26,12 +26,10 @@
           "foreground": "#000000",
           "properties": {
             "branch_icon": "\uf126 ",
-            "fetch_stash_count": true,
-            "fetch_status": true,
-            "fetch_upstream_icon": true
+            "fetch_status": true
           },
           "style": "plain",
-          "template": "<parentBackground,background></> {{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }} ",
+          "template": "<parentBackground,background></> {{ .HEAD | replace \"feature/\" \"\" | replace \"fix/\" \"\" | abbrev 20 }} ",
           "type": "git"
         },
         {
