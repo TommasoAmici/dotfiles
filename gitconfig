@@ -12,6 +12,8 @@
 	rebase = true
 [push]
 	autoSetupRemote = true
+[fetch]
+	prune = true
 [commit]
 	gpgsign = true
 	commentchar = "#"
