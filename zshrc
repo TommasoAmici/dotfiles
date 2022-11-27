@@ -63,3 +63,8 @@ if type atuin >/dev/null 2>&1; then
   eval "$(atuin init zsh)"
   bindkey '^r' _atuin_search_widget
 fi
+
+if type fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd)"
+fi
+
