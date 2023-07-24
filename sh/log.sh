@@ -21,7 +21,7 @@ YELLOW="0;33"
 LOG_LEVEL_DEBUG=0
 LOG_LEVEL_INFO=1
 LOG_LEVEL_WARNING=2
-export LOG_LEVEL=0
+export _LOG_LEVEL=0
 
 print_color() {
   LEVEL=$1
@@ -41,28 +41,28 @@ log_error() {
 
 # Prints debug information. Usage: log_debug "hello world"
 log_debug() {
-  if [ $LOG_LEVEL -le $LOG_LEVEL_DEBUG ]; then
+  if [ $_LOG_LEVEL -le $LOG_LEVEL_DEBUG ]; then
     printf "DEBUG: %s\n" "$1"
   fi
 }
 
 # Prints in green, level info. Usage: log_success "hello world"
 log_success() {
-  if [ $LOG_LEVEL -le $LOG_LEVEL_INFO ]; then
+  if [ $_LOG_LEVEL -le $LOG_LEVEL_INFO ]; then
     print_color "INFO" $GREEN_BOLD "$1"
   fi
 }
 
 # Prints in blue. Usage: log_info "hello world"
 log_info() {
-  if [ $LOG_LEVEL -le $LOG_LEVEL_INFO ]; then
+  if [ $_LOG_LEVEL -le $LOG_LEVEL_INFO ]; then
     print_color "INFO" $BLUE "$1"
   fi
 }
 
 # Prints a warning in orange. Usage: log_warning "hello world"
 log_warning() {
-  if [ $LOG_LEVEL -le $LOG_LEVEL_WARNING ]; then
+  if [ $_LOG_LEVEL -le $LOG_LEVEL_WARNING ]; then
     print_color "WARN" $YELLOW "$1" >&2
   fi
 }
