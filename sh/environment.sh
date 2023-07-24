@@ -23,9 +23,8 @@ export PATH=~/.cargo/bin:"$PATH"
 _SQLITE_PATH="$(brew --prefix sqlite)/bin"
 _LIBRESSL_PATH="$(brew --prefix libressl)/bin"
 _CURL_PATH="$(brew --prefix curl)/bin"
-_PYTHON311_PATH="$(brew --prefix python@3.11)/libexec/bin"
 _POSTGRES15_PATH="$(brew --prefix postgresql@15)/bin"
-export PATH="$_SQLITE_PATH:$_LIBRESSL_PATH:$_CURL_PATH:$_PYTHON311_PATH:$_POSTGRES15_PATH:$PATH"
+export PATH="$_SQLITE_PATH:$_LIBRESSL_PATH:$_CURL_PATH:$_POSTGRES15_PATH:$PATH"
 
 export PATH=~/.rustup/toolchains/stable-aarch64-apple-darwin/bin:"$PATH"
 
