@@ -14,7 +14,7 @@ ffmpeg_to_mp4() {
 
 # Removes sound from given video
 ffmpeg_remove_sound() {
-  OUT="${2:-$1-nosound}"
+  OUT="${2:-nosound-$1}"
   ffmpeg -i "$1" -c copy -an "$OUT"
 }
 
