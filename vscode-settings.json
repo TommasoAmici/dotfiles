@@ -1,0 +1,311 @@
+{
+  "telemetry.telemetryLevel": "error",
+  "workbench.colorTheme": "GitHub Light Default",
+  "workbench.preferredLightColorTheme": "GitHub Light Default",
+  "workbench.preferredDarkColorTheme": "GitHub Dark High Contrast",
+  "workbench.preferredHighContrastColorTheme": "GitHub Dark High Contrast",
+  "workbench.iconTheme": "file-icons",
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono, Hack, Menlo, Monaco, 'Courier New', monospace",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true,
+    "quickfix.rome": true
+  },
+  "editor.fontSize": 12,
+  "editor.tabSize": 2,
+  "editor.fontWeight": "normal",
+  "editor.renderWhitespace": "all",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.fontLigatures": true,
+  "editor.accessibilitySupport": "off",
+  "editor.maxTokenizationLineLength": 2000,
+  "editor.rulers": [80, 120],
+  "editor.wrappingIndent": "deepIndent",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.detectIndentation": false,
+  "editor.minimap.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "files.trimFinalNewlines": true,
+  "window.autoDetectHighContrast": false,
+  "window.autoDetectColorScheme": true,
+  "workbench.colorCustomizations": {
+    "terminal.background": "#1d1d21",
+    "terminal.foreground": "#c7c7c7",
+    "terminalCursor.background": "#D6D6D6",
+    "terminalCursor.foreground": "#ffffff",
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiBlue": "#64b3d6",
+    "terminal.ansiBrightBlack": "#71747e",
+    "terminal.ansiBrightBlue": "#75bcdb",
+    "terminal.ansiBrightCyan": "#75bcdb",
+    "terminal.ansiBrightGreen": "#88b666",
+    "terminal.ansiBrightMagenta": "#e3843e",
+    "terminal.ansiBrightRed": "#db585d",
+    "terminal.ansiBrightWhite": "#FFFFFF",
+    "terminal.ansiBrightYellow": "#e3c95d",
+    "terminal.ansiCyan": "#64b3d6",
+    "terminal.ansiGreen": "#88b666",
+    "terminal.ansiMagenta": "#e16839",
+    "terminal.ansiRed": "#db5e63",
+    "terminal.ansiWhite": "#cbcdd1",
+    "terminal.ansiYellow": "#e3c95d"
+  },
+  // PYTHON
+  "python.analysis.completeFunctionParens": true,
+  "python.formatting.provider": "black",
+  "python.languageServer": "Pylance",
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[rust]": {
+    "editor.tabSize": 4
+  },
+  "files.associations": {
+    "*.py": "python",
+    "*.js": "javascript",
+    "*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "*.tmpl": "gohtml",
+    "*.heex": "html-eex",
+    "requirements*.txt": "pip-requirements"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "html.format.indentHandlebars": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggest.completeFunctionCalls": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[latex]": {
+    "editor.lineHeight": 2
+  },
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "[rsweave]": {
+    "editor.lineHeight": 2,
+    "editor.fontSize": 14
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[gohtml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[django-html]": {
+    "editor.formatOnSave": false,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    "editor.insertSpaces": true
+  },
+  "editor.columnSelection": false,
+  "editor.suggestSelection": "first",
+  // GOLANG
+  "go.formatTool": "gofmt",
+  "go.useLanguageServer": true,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
+  "extensions.ignoreRecommendations": false,
+  "svg.preview.mode": "svg",
+  "tailwindCSS.includeLanguages": {
+    "gohtml": "html",
+    "django-html": "html",
+    "phoenix-heex": "html"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)", // tw`...`
+    "tw=\"([^\"]*)", // <div tw="..." />
+    "tw={\"([^\"}]*)", // <div tw={"..."} />
+    "tw\\.\\w+`([^`]*)", // tw.xxx`...`
+    "tw\\(.*?\\)`([^`]*)" // tw(Component)`...`
+  ],
+  "files.insertFinalNewline": true,
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascriptreact",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "plist",
+    "django-html"
+  ],
+  "remote.SSH.lockfilesInTmp": true,
+  "remote.SSH.maxReconnectionAttempts": 2,
+  "git.autofetch": true,
+  "notebook.output.textLineLimit": 0,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "stylelint.packageManager": "yarn",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.note-new-transformation": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX", "[ ]"],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "terminal.integrated.minimumContrastRatio": 4.5,
+  "css.validate": false,
+  "redhat.telemetry.enabled": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "go.addTags": {
+    "transform": "camelcase"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[haskell]": {
+    "editor.defaultFormatter": "haskell.haskell"
+  },
+  "haskell.manageHLS": "GHCup",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.bibtex-format.sort.enabled": true,
+  "latex-workshop.bibtex-fields.sort.enabled": true,
+  "latex-workshop.bibtex-format.trailingComma": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.cursorStyle": "line",
+  "latex-workshop.latexindent.args": [
+    "-c",
+    "%DIR%/",
+    "%TMPFILE%",
+    "-y=defaultIndent: '%INDENT%'",
+    "--modifylinebreaks",
+    "--local=/Users/tamici/dotfiles/latex-indent-settings.yaml"
+  ],
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html-eex]": {
+    "editor.trimAutoWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true
+  },
+  "cSpell.userWords": ["ANOVA", "enjoyability", "situationally"],
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts, ${capture}.stories.tsx",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock,.yarnrc.yml,.npmignore,.npmrc,pnpm-lock.yaml",
+    "prettier.config.js": ".prettierignore",
+    "next.config.js": "next-env.d.ts",
+    ".gitignore": ".gitattributes,.git-blame-ignore-revs",
+    "coverage.xml": ".coverage,pytest.html,pytest.xml",
+    ".prettierrc": ".prettierignore",
+    "requirements.txt": "requirements*.txt",
+    "*.stories.js": "${capture}.mdx",
+    ".prettierrc.json": ".prettierignore",
+    ".eslintrc.js": ".eslintignore,.eslintcache",
+    "*.tex": "${capture}.aux,${capture}.bbl,${capture}.blg,${capture}.fdb_latexmk,${capture}.out,${capture}.fls,${capture}.lof,${capture}.log,${capture}.lot,${capture}.synctex.gz,${capture}.toc,${capture}.thm,${capture}.pdf",
+    "*.Rnw": "${capture}.tex,${capture}-concordance.tex,${capture}.r",
+    "Dockerfile": "*.Dockerfile,.dockerignore",
+    ".env": "*.env"
+  },
+  "bracketLens.mode": "auto",
+  "r.plot.useHttpgd": true,
+  "r.rterm.mac": "/usr/local/bin/radian",
+  "r.bracketedPaste": true,
+  "git.branchProtection": ["main", "master", "develop"],
+  "window.commandCenter": true,
+  "shellformat.useEditorConfig": true,
+  "shellformat.path": "/opt/homebrew/bin/shfmt",
+  "githubPullRequests.pullBranch": "never",
+  "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+  "files.exclude": {
+    "**/.trunk/*out": true
+  },
+  "trunk.trunkGrayOutNonBlockingIssues": false,
+  "files.watcherExclude": {
+    "**/.trunk/*out": true
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "python.testing.pytestEnabled": true,
+  "githubPullRequests.defaultMergeMethod": "rebase",
+  "git.rebaseWhenSync": true,
+  "git.mergeEditor": false,
+  "editor.stickyScroll.enabled": true,
+  "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
+  "cmake.configureOnOpen": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "eslint.format.enable": true,
+  "apple-swift-format.path": "/opt/homebrew/bin/swiftformat",
+  "swiftformat.path": "/opt/homebrew/bin/swiftformat",
+  "haskell.ghcupExecutablePath": "~/.ghcup/bin/ghcup",
+  "python.analysis.autoImportCompletions": true,
+  "black-formatter.importStrategy": "fromEnvironment",
+  "black-formatter.showNotifications": "onError",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "typescript": true
+  },
+  "diffEditor.diffAlgorithm": "advanced",
+  "playwright.reuseBrowser": true,
+  "emmet.showAbbreviationSuggestions": false,
+  "emmet.showExpandedAbbreviation": "never",
+  "editor.linkedEditing": true,
+  "git.openRepositoryInParentFolders": "always",
+  "search.useParentIgnoreFiles": true
+}
