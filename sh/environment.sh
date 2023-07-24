@@ -36,3 +36,6 @@ export ATUIN_CONFIG_DIR="$DOTFILES/atuin"
 export BROWSER=none
 
 export BAT_THEME=base16
+
+# prevent eslint errors from showing error overlay in create-react-app
+export ESLINT_NO_DEV_ERRORS=true
