@@ -132,6 +132,11 @@
   "go.useLanguageServer": true,
   "go.lintTool": "golangci-lint",
   "go.lintFlags": ["--fast"],
+  "go.inferGopath": true,
+  "go.toolsManagement.autoUpdate": true,
+  "go.addTags": {
+    "transform": "camelcase"
+  },
   "extensions.ignoreRecommendations": false,
   "svg.preview.mode": "svg",
   "tailwindCSS.includeLanguages": {
@@ -192,7 +197,6 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "go.toolsManagement.autoUpdate": true,
   "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX", "[ ]"],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "terminal.integrated.minimumContrastRatio": 4.5,
@@ -203,9 +207,6 @@
     "jupyter-notebook": "left"
   },
   "diffEditor.ignoreTrimWhitespace": false,
-  "go.addTags": {
-    "transform": "camelcase"
-  },
   "[dockerfile]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
