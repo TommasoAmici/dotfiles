@@ -158,7 +158,9 @@
     "tw=\"([^\"]*)", // <div tw="..." />
     "tw={\"([^\"}]*)", // <div tw={"..."} />
     "tw\\.\\w+`([^`]*)", // tw.xxx`...`
-    "tw\\(.*?\\)`([^`]*)" // tw(Component)`...`
+    "tw\\(.*?\\)`([^`]*)", // tw(Component)`...`
+    "tw\\(.*?\\)<.*?>`([^`]*)", // tw(Component)<Props>`...`
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
   "files.insertFinalNewline": true,
   "auto-close-tag.activationOnLanguage": [
