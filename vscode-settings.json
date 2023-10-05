@@ -69,7 +69,7 @@
     "*.html": "html",
     "**/templates/**/*.html": "django-html",
     "*.tmpl": "gohtml",
-    "*.heex": "html-eex",
+    "*.heex": "phoenix-heex",
     "requirements*.txt": "pip-requirements"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -125,6 +125,14 @@
     },
     "editor.insertSpaces": true
   },
+  "[elixir]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "JakeBecker.elixir-ls"
+  },
+  "[phoenix-heex]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "JakeBecker.elixir-ls"
+  },
   "editor.columnSelection": false,
   "editor.suggestSelection": "first",
   // GOLANG
@@ -142,7 +150,8 @@
   "tailwindCSS.includeLanguages": {
     "gohtml": "html",
     "django-html": "html",
-    "phoenix-heex": "html"
+    "phoenix-heex": "html",
+    "elixir": "html"
   },
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
@@ -230,12 +239,6 @@
   ],
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html-eex]": {
-    "editor.trimAutoWhitespace": false,
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true
   },
   "cSpell.userWords": ["ANOVA", "enjoyability", "situationally"],
   "explorer.fileNesting.enabled": true,
