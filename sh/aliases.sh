@@ -6,10 +6,10 @@ if type hx >/dev/null 2>&1; then
   alias vim=hx
 fi
 
-if type exa >/dev/null 2>&1; then
-  alias ls="exa --classify --icons --grid"
-  alias ll='exa --classify --icons --long'
-  alias tree="exa --tree --icons"
+if type eza >/dev/null 2>&1; then
+  alias ls="eza --classify --icons --grid"
+  alias ll='eza --classify --icons --long'
+  alias tree="eza --tree --icons"
 else
   alias ls='ls -FG'
   alias ll='ls -lh'
