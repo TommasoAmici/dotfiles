@@ -65,7 +65,11 @@ if type atuin >/dev/null 2>&1; then
   bindkey '^r' _atuin_search_widget
 fi
 
-if type rtx >/dev/null 2>&1; then
-  eval "$(rtx activate zsh)"
+if type mise >/dev/null 2>&1; then
+  if [ "$VSCODE_RESOLVING_ENVIRONMENT" = 1 ]; then
+    eval "$(mise activate zsh --shims)"
+  else
+    eval "$(mise activate zsh)"
+  fi
 fi
 
