@@ -9,7 +9,7 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true,
     "source.fixAll": true,
-    "quickfix.rome": true
+    "quickfix.biome": true
   },
   "editor.fontSize": 12,
   "editor.tabSize": 2,
@@ -301,11 +301,10 @@
   "black-formatter.importStrategy": "fromEnvironment",
   "black-formatter.showNotifications": "onError",
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": true,
-    "scminput": false,
-    "typescript": true
+    "scminput": false
   },
   "diffEditor.diffAlgorithm": "advanced",
   "playwright.reuseBrowser": true,
