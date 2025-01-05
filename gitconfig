@@ -36,3 +36,24 @@
 	fsmonitor = false
 [rebase]
 	updateRefs = true
+	autosquash = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[diff]
+    external = difft
+[diff "lockb"]
+	textconv = bun
+	binary = true
+[rerere]
+	enabled = true
+[pack]
+	allowPackReuse = multi
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential
