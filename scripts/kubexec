@@ -1,0 +1,2 @@
+#!/bin/sh
+kubectl exec "$(kubectl get pods --no-headers -o custom-columns=":metadata.name" | fzf)" -it -- /bin/bash
