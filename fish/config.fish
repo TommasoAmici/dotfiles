@@ -1,4 +1,6 @@
 if status is-interactive
+    set -g fish_greeting
+
     set -x ELIXIR_ERL_OPTIONS "-kernel shell_history enabled"
     set -x MISE_ENV_FILE '.env'
 
