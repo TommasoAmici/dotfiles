@@ -66,6 +66,9 @@
       "language_servers": ["rubocop", "ruby-lsp"],
       "formatter": "language_server"
     },
+    "HTML": {
+      "tab_size": 2
+    },
     "HTML/ERB": {
       "formatter": {
         "external": {
